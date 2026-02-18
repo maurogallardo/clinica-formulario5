@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario 5 - Control de Enfermería</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 3px solid #667eea;
+    }
+    
+    h1 {
+      color: #667eea;
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+    
+    .subtitle {
+      color: #666;
+      font-size: 14px;
+    }
+    
+    .form-section {
+      margin-bottom: 25px;
+    }
+    
+    .section-title {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e0e0e0;
+      font-weight: 600;
+    }
+    
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: all 0.3s;
+      font-family: inherit;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+    
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    
+    .btn-submit {
+      width: 100%;
+      padding: 16px;
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+    
+    .btn-submit:hover {
+      background: #5568d3;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+    
+    .btn-submit:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .mensaje {
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      display: none;
+      animation: slideIn 0.3s ease;
+    }
+    
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .mensaje.exito {
+      background: #d4edda;
+      color: #155724;
+      border: 2px solid #c3e6cb;
+    }
+    
+    .mensaje.error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 2px solid #f5c6cb;
+    }
+    
+    @media (max-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      
+      .container {
+        padding: 20px;
+      }
+      
+      h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📋 Formulario 5</h1>
+      <p class="subtitle">Control de Enfermería - Clínica Modelo</p>
+    </div>
+    
+    <form id="formulario5">
+      
+      <!-- Sección: Datos Básicos -->
+      <div class="form-section">
+        <div class="section-title">Datos Básicos</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fecha">Fecha *</label>
+            <input type="date" id="fecha" name="fecha" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="turno">Turno *</label>
+            <select id="turno" name="turno" required>
+              <option value="">Seleccione...</option>
+              <option value="Mañana">Mañana (06:00 - 14:00)</option>
+              <option value="Tarde">Tarde (14:00 - 22:00)</option>
+              <option value="Noche">Noche (22:00 - 06:00)</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="profesional">Profesional *</label>
+            <input type="text" id="profesional" name="profesional" placeholder="Nombre del profesional" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="tramite_adm">Trámite ADM</label>
+            <select id="tramite_adm" name="tramite_adm">
+              <option value="">Seleccione...</option>
+              <option value="SI">SI</option>
+              <option value="NO">NO</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sección: Indicaciones -->
+      <div class="form-section">
+        <div class="section-title">Indicaciones Médicas</div>
+        <div class="form-group full-width">
+          <label for="indicaciones_medicas">Indicaciones</label>
+          <textarea id="indicaciones_medicas" name="indicaciones_medicas" placeholder="Escriba las indicaciones médicas..."></textarea>
+        </div>
+        
+        <div class="form-group full-width">
+          <label for="diagnostico">Diagnóstico</label>
+          <textarea id="diagnostico" name="diagnostico" placeholder="Escriba el diagnóstico..."></textarea>
+        </div>
+      </div>
+      
+      <!-- Sección: Control del Paciente -->
+      <div class="form-section">
+        <div class="section-title">Control del Paciente</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="dieta">Dieta</label>
+            <input type="text" id="dieta" name="dieta" placeholder="Ej: Normal, blanda, líquida">
+          </div>
+          
+          <div class="form-group">
+            <label for="hidratacion">Hidratación</label>
+            <input type="text" id="hidratacion" name="hidratacion" placeholder="Ej: 2000ml">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sección: Diuresis -->
+      <div class="form-section">
+        <div class="section-title">Diuresis</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="diuresis_manana">Mañana (05 a 13)</label>
+            <input type="text" id="diuresis_manana" name="diuresis_manana" placeholder="Ej: 500ml">
+          </div>
+          
+          <div class="form-group">
+            <label for="diuresis_tarde">Tarde (13 a 21)</label>
+            <input type="text" id="diuresis_tarde" name="diuresis_tarde" placeholder="Ej: 400ml">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="diuresis_noche">Noche (21 a 05)</label>
+          <input type="text" id="diuresis_noche" name="diuresis_noche" placeholder="Ej: 300ml">
+        </div>
+      </div>
+      
+      <!-- Sección: Otros Controles -->
+      <div class="form-section">
+        <div class="section-title">Otros Controles</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="drenajes">Drenajes</label>
+            <input type="text" id="drenajes" name="drenajes" placeholder="Descripción de drenajes">
+          </div>
+          
+          <div class="form-group">
+            <label for="sng_vomitos">SNG / Vómitos</label>
+            <input type="text" id="sng_vomitos" name="sng_vomitos" placeholder="Descripción">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="deposiciones">Deposiciones</label>
+          <input type="text" id="deposiciones" name="deposiciones" placeholder="Descripción de deposiciones">
+        </div>
+      </div>
+      
+      <!-- Sección: Controles de Enfermería -->
+      <div class="form-section">
+        <div class="section-title">Controles de Enfermería</div>
+        <div class="form-group full-width">
+          <label for="controles_enfermeria">Controles (F.R., Te., P., T.A.)</label>
+          <textarea id="controles_enfermeria" name="controles_enfermeria" placeholder="Ej: FR: 18, Te: 36.5°C, P: 75, TA: 120/80"></textarea>
+        </div>
+      </div>
+      
+      <!-- Sección: Observaciones -->
+      <div class="form-section">
+        <div class="section-title">Observaciones</div>
+        <div class="form-group full-width">
+          <label for="observaciones_enfermeria">Observaciones de Enfermería</label>
+          <textarea id="observaciones_enfermeria" name="observaciones_enfermeria" rows="4" placeholder="Escriba sus observaciones..."></textarea>
+        </div>
+      </div>
+      
+      <button type="submit" class="btn-submit" id="btnEnviar">
+        📤 Enviar Formulario
+      </button>
+    </form>
+    
+    <div id="mensaje" class="mensaje"></div>
+  </div>
+
+  <script>
+    // Configuración
+    const WEBHOOK_URL = 'https://n8n-production-0142.up.railway.app/webhook/formulario5';
+    
+    // Poner fecha de hoy por defecto
+    document.getElementById('fecha').valueAsDate = new Date();
+    
+    // Manejar envío del formulario
+    document.getElementById('formulario5').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const btnEnviar = document.getElementById('btnEnviar');
+      const mensaje = document.getElementById('mensaje');
+      
+      // Deshabilitar botón mientras envía
+      btnEnviar.disabled = true;
+      btnEnviar.textContent = '⏳ Enviando...';
+      
+      // Recopilar datos del formulario
+      const formData = {
+        fecha: document.getElementById('fecha').value,
+        turno: document.getElementById('turno').value,
+        profesional: document.getElementById('profesional').value,
+        tramite_adm: document.getElementById('tramite_adm').value,
+        indicaciones_medicas: document.getElementById('indicaciones_medicas').value,
+        diagnostico: document.getElementById('diagnostico').value,
+        dieta: document.getElementById('dieta').value,
+        hidratacion: document.getElementById('hidratacion').value,
+        diuresis_manana: document.getElementById('diuresis_manana').value,
+        diuresis_tarde: document.getElementById('diuresis_tarde').value,
+        diuresis_noche: document.getElementById('diuresis_noche').value,
+        drenajes: document.getElementById('drenajes').value,
+        sng_vomitos: document.getElementById('sng_vomitos').value,
+        deposiciones: document.getElementById('deposiciones').value,
+        controles_enfermeria: document.getElementById('controles_enfermeria').value,
+        observaciones_enfermeria: document.getElementById('observaciones_enfermeria').value
+      };
+      
+      try {
+        // Enviar a N8N
+        const response = await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+        
+        if (response.ok) {
+          // Éxito
+          mensaje.className = 'mensaje exito';
+          mensaje.style.display = 'block';
+          mensaje.textContent = '✅ Formulario enviado correctamente. Administración ha sido notificada.';
+          
+          // Limpiar formulario
+          document.getElementById('formulario5').reset();
+          document.getElementById('fecha').valueAsDate = new Date();
+          
+          // Scroll al mensaje
+          mensaje.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          throw new Error('Error en el servidor');
+        }
+        
+      } catch (error) {
+        // Error
+        mensaje.className = 'mensaje error';
+        mensaje.style.display = 'block';
+        mensaje.textContent = '❌ Error al enviar el formulario. Por favor intente nuevamente.';
+        console.error('Error:', error);
+      } finally {
+        // Rehabilitar botón
+        btnEnviar.disabled = false;
+        btnEnviar.textContent = '📤 Enviar Formulario';
+      }
+    });
+  </script>
+</body>
+</html>
