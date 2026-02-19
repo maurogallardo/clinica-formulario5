@@ -35,10 +35,10 @@ body {
     background: white;
 }
 
-/* FILA 1: Fecha, Hab, Mutual, Dr, Pte - Altura aprox 5mm */
+/* FILA 1: Fecha 40mm | Hab 20mm | Mutual 50mm | Dr 70mm | Pte 80mm */
 .row1 {
     display: grid;
-    grid-template-columns: 25mm 15mm 45mm 30mm 1fr;
+    grid-template-columns: 40mm 20mm 50mm 70mm 80mm;
     border-bottom: 1pt solid #000;
     height: 5mm;
 }
@@ -70,10 +70,10 @@ body {
     background: transparent;
 }
 
-/* FILA 2: Trámite, Indicaciones, Diagnóstico - Altura aprox 6mm */
+/* FILA 2: Trámite 50mm | Indicaciones 70mm | Diagnóstico 140mm */
 .row2 {
     display: grid;
-    grid-template-columns: 70mm 76mm 114mm;
+    grid-template-columns: 50mm 70mm 140mm;
     border-bottom: 1pt solid #000;
     height: 6mm;
     font-size: 11pt;
@@ -113,53 +113,52 @@ body {
     justify-content: center;
 }
 
-/* ÁREA DE DIAGNÓSTICO: Y: 0-104mm, X: 114-260mm */
-/* Las líneas punteadas van desde Y: 11mm hasta Y: 98mm aprox */
-/* Altura disponible: 98-11 = 87mm ÷ 5mm = 17 líneas aprox */
-
+/* LÍNEAS PUNTEADAS: Área ~87mm, separación 6.92mm = ~13 líneas */
 .lines-section {
     padding: 1mm 3mm;
     border-bottom: 1pt solid #000;
-    height: 98mm;
+    height: 87mm;
 }
 
 .dotted-line {
     border-bottom: 1pt dotted #333;
-    height: 5mm;
+    height: 6.92mm;
     margin: 0;
 }
 
-/* DIETA - Altura aprox 6mm */
+/* DIETA: Altura 6mm */
 .dieta-section {
     border-bottom: 1pt solid #000;
     padding: 1mm 3mm;
     height: 6mm;
+    display: flex;
+    align-items: center;
+    gap: 2mm;
 }
 
 .dieta-section label {
     font-size: 11pt;
     font-weight: bold;
-    margin-bottom: 0.5mm;
-    display: block;
+    white-space: nowrap;
 }
 
 .dieta-section input {
     border: none;
     border-bottom: 1pt dotted #333;
-    width: 100%;
+    flex: 1;
     font-size: 11pt;
     padding: 0;
     background: transparent;
 }
 
-/* TABLA PRINCIPAL: Y: 105-178mm = 73mm altura */
+/* TABLA PRINCIPAL: 73mm altura, Hidratación 115mm | Grid 145mm */
 .main-table {
     display: grid;
-    grid-template-columns: 114mm 146mm;
+    grid-template-columns: 115mm 145mm;
     height: 73mm;
 }
 
-/* HIDRATACIÓN: X: 0-114mm, Y: 105-178mm */
+/* HIDRATACIÓN: 115mm */
 .hidratacion-col {
     border-right: 1pt solid #000;
     padding: 2mm;
@@ -181,10 +180,10 @@ body {
     background: transparent;
 }
 
-/* ÁREA DIURESIS: X: 114-260mm (146mm), dividido en 4 columnas + controles */
+/* GRID DERECHO: 145mm → 4 columnas iguales de 36.25mm */
 .right-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 36.25mm);
     grid-template-rows: 8mm 1fr;
 }
 
@@ -214,10 +213,12 @@ body {
     border-right: none;
 }
 
+/* DIURESIS */
 .diuresis-col {
     display: flex;
     flex-direction: column;
     gap: 2mm;
+    padding-top: 1mm;
 }
 
 .diuresis-item {
@@ -238,6 +239,7 @@ body {
     background: transparent;
 }
 
+/* COLUMNAS SIMPLES: Drenajes, SNG, Deposiciones */
 .simple-col {
     padding-top: 1mm;
 }
@@ -251,7 +253,7 @@ body {
     background: transparent;
 }
 
-/* CONTROLES DE ENFERMERÍA */
+/* CONTROLES DE ENFERMERÍA: Span 4 columnas */
 .controles-col {
     grid-column: span 4;
     border-top: 1pt solid #000;
@@ -306,7 +308,7 @@ body {
     background: transparent;
 }
 
-/* OBSERVACIONES: Y: 178-197mm = 19mm altura */
+/* OBSERVACIONES: 19mm altura, 2 renglones */
 .observaciones {
     border-top: 1pt solid #000;
     padding: 1.5mm 3mm;
@@ -315,27 +317,35 @@ body {
 
 .observaciones label {
     font-size: 11pt;
-    display: block;
-    margin-bottom: 0.5mm;
+    display: inline;
+    margin-right: 1mm;
+}
+
+.observaciones-line1 {
+    border-bottom: 1pt dotted #333;
+    height: 6.92mm;
+    margin-bottom: 0;
+}
+
+.observaciones-line2 {
+    border-bottom: 1pt dotted #333;
+    height: 6.92mm;
+    margin-top: 0;
 }
 
 .observaciones textarea {
-    width: 100%;
-    height: calc(100% - 5mm);
-    border: none;
-    font-family: Arial, sans-serif;
-    font-size: 11pt;
-    resize: none;
-    background: transparent;
-    line-height: 1.3;
+    display: none;
 }
 
-/* FORMULARIO Nº 5 - Fuera del recuadro, abajo izquierda */
+/* FORMULARIO Nº 5: Fuera del recuadro, vertical, margen 2mm */
 .form-number {
     position: absolute;
-    bottom: -6mm;
-    left: 0;
+    bottom: -3mm;
+    left: -3mm;
     font-size: 11pt;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
 }
 
 input:focus,
@@ -352,7 +362,7 @@ textarea:focus {
 .btn-submit {
     padding: 4mm 12mm;
     background: white;
-    border: 1pt solid #000;
+    border: 2pt solid #000;
     font-size: 11pt;
     font-weight: bold;
     cursor: pointer;
@@ -374,7 +384,7 @@ textarea:focus {
 .message {
     margin-top: 5mm;
     padding: 4mm;
-    border: 1pt solid #000;
+    border: 2pt solid #000;
     text-align: center;
     font-size: 11pt;
     display: none;
