@@ -168,7 +168,7 @@ textarea:focus {
     height: 155px;
 }
 
-/* CONTROLES MAÑANA — 5px de separación entre cada uno */
+/* CONTROLES MAÑANA */
 .control-manana-fr {
     position: absolute;
     top: 448px;
@@ -182,7 +182,7 @@ textarea:focus {
 .control-manana-te {
     position: absolute;
     top: 448px;
-    left: 835px;
+    left: 838px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -192,7 +192,7 @@ textarea:focus {
 .control-manana-p {
     position: absolute;
     top: 448px;
-    left: 862px;
+    left: 868px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -202,7 +202,7 @@ textarea:focus {
 .control-manana-ta {
     position: absolute;
     top: 448px;
-    left: 889px;
+    left: 898px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -223,7 +223,7 @@ textarea:focus {
 .control-tarde-te {
     position: absolute;
     top: 507px;
-    left: 835px;
+    left: 838px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -233,7 +233,7 @@ textarea:focus {
 .control-tarde-p {
     position: absolute;
     top: 507px;
-    left: 862px;
+    left: 868px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -243,7 +243,7 @@ textarea:focus {
 .control-tarde-ta {
     position: absolute;
     top: 507px;
-    left: 889px;
+    left: 898px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -264,7 +264,7 @@ textarea:focus {
 .control-noche-te {
     position: absolute;
     top: 570px;
-    left: 835px;
+    left: 838px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -274,7 +274,7 @@ textarea:focus {
 .control-noche-p {
     position: absolute;
     top: 570px;
-    left: 862px;
+    left: 868px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -284,7 +284,7 @@ textarea:focus {
 .control-noche-ta {
     position: absolute;
     top: 570px;
-    left: 889px;
+    left: 898px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
