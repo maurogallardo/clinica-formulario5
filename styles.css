@@ -57,114 +57,114 @@ textarea:focus {
     position: absolute;
 }
 
-/* FILA SUPERIOR */
+/* FILA SUPERIOR — subido 10px */
 #fecha {
-    top: 42px;
+    top: 32px;
     left: 11px;
     width: 95px;
 }
 
 #hab {
-    top: 42px;
+    top: 32px;
     left: 175px;
     width: 45px;
 }
 
 #mutual {
-    top: 42px;
+    top: 32px;
     left: 230px;
     width: 125px;
 }
 
 #dr {
-    top: 42px;
+    top: 32px;
     left: 365px;
     width: 140px;
 }
 
 #pte {
-    top: 42px;
+    top: 32px;
     left: 520px;
     width: 200px;
 }
 
-/* TRÁMITE ADM */
+/* TRÁMITE ADM — subido 10px */
 .campo-tramite {
     position: absolute;
-    top: 58px;
+    top: 48px;
     left: 110px;
     display: flex;
     gap: 8px;
 }
 
-/* DIETA */
+/* DIETA — bajado 20px, ancho achicado 30px */
 #dieta {
-    top: 328px;
+    top: 348px;
     left: 55px;
-    width: 920px;
+    width: 890px;
 }
 
-/* HIDRATACIÓN */
+/* HIDRATACIÓN — bajado 15px, movido 10px a la izquierda */
 #hidratacion {
-    top: 375px;
-    left: 165px;
+    top: 390px;
+    left: 155px;
     width: 210px;
     height: 155px;
     padding: 3px;
     resize: none;
 }
 
-/* DIURESIS */
+/* DIURESIS — bajado 15px, movido 20px a la derecha */
 #diuresis_manana {
-    top: 388px;
-    left: 393px;
+    top: 403px;
+    left: 413px;
     width: 60px;
 }
 
 #diuresis_tarde {
-    top: 435px;
-    left: 393px;
+    top: 450px;
+    left: 413px;
     width: 60px;
 }
 
 #diuresis_noche {
-    top: 483px;
-    left: 393px;
+    top: 498px;
+    left: 413px;
     width: 60px;
 }
 
-/* DRENAJES */
+/* DRENAJES — bajado 15px, movido 20px a la derecha */
 #drenajes {
-    top: 375px;
-    left: 462px;
+    top: 390px;
+    left: 482px;
     width: 60px;
     height: 155px;
     resize: none;
 }
 
-/* SNG VOMITOS */
+/* SNG VOMITOS — bajado 15px, movido 20px a la derecha */
 #sng_vomitos {
-    top: 375px;
-    left: 535px;
+    top: 390px;
+    left: 555px;
     width: 60px;
     height: 155px;
     resize: none;
 }
 
-/* DEPOSICIONES */
+/* DEPOSICIONES — bajado 15px, movido 20px a la derecha */
 #deposiciones {
-    top: 375px;
-    left: 608px;
+    top: 390px;
+    left: 628px;
     width: 60px;
     height: 155px;
     resize: none;
 }
 
-/* CONTROLES ENFERMERÍA - MAÑANA */
+/* CONTROLES ENFERMERÍA MAÑANA — bajado 15px, movido 20px a la derecha */
 .control-manana-fr {
     position: absolute;
-    top: 388px;
-    left: 683px;
+    top: 403px;
+    left: 703px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -173,8 +173,8 @@ textarea:focus {
 
 .control-manana-te {
     position: absolute;
-    top: 388px;
-    left: 706px;
+    top: 403px;
+    left: 726px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -183,8 +183,8 @@ textarea:focus {
 
 .control-manana-p {
     position: absolute;
-    top: 388px;
-    left: 729px;
+    top: 403px;
+    left: 749px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -193,19 +193,19 @@ textarea:focus {
 
 .control-manana-ta {
     position: absolute;
-    top: 388px;
-    left: 752px;
+    top: 403px;
+    left: 772px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES ENFERMERÍA - TARDE */
+/* CONTROLES ENFERMERÍA TARDE — bajado 15px, movido 20px a la derecha */
 .control-tarde-fr {
     position: absolute;
-    top: 435px;
-    left: 683px;
+    top: 450px;
+    left: 703px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -214,8 +214,8 @@ textarea:focus {
 
 .control-tarde-te {
     position: absolute;
-    top: 435px;
-    left: 706px;
+    top: 450px;
+    left: 726px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -224,8 +224,8 @@ textarea:focus {
 
 .control-tarde-p {
     position: absolute;
-    top: 435px;
-    left: 729px;
+    top: 450px;
+    left: 749px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -234,19 +234,19 @@ textarea:focus {
 
 .control-tarde-ta {
     position: absolute;
-    top: 435px;
-    left: 752px;
+    top: 450px;
+    left: 772px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES ENFERMERÍA - NOCHE */
+/* CONTROLES ENFERMERÍA NOCHE — bajado 15px, movido 20px a la derecha */
 .control-noche-fr {
     position: absolute;
-    top: 483px;
-    left: 683px;
+    top: 498px;
+    left: 703px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -255,8 +255,8 @@ textarea:focus {
 
 .control-noche-te {
     position: absolute;
-    top: 483px;
-    left: 706px;
+    top: 498px;
+    left: 726px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -265,8 +265,8 @@ textarea:focus {
 
 .control-noche-p {
     position: absolute;
-    top: 483px;
-    left: 729px;
+    top: 498px;
+    left: 749px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -275,19 +275,19 @@ textarea:focus {
 
 .control-noche-ta {
     position: absolute;
-    top: 483px;
-    left: 752px;
+    top: 498px;
+    left: 772px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* OBSERVACIONES */
+/* OBSERVACIONES — bajado 40px, ancho achicado 60px */
 #observaciones_enfermeria {
-    top: 535px;
+    top: 575px;
     left: 8px;
-    width: 965px;
+    width: 905px;
     height: 36px;
     resize: none;
     font-size: 9pt;
