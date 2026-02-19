@@ -37,21 +37,19 @@ body {
     background-position: center;
 }
 
-input[type="date"],
 input[type="text"],
 input[type="checkbox"],
 textarea {
     background: transparent;
-    border: none;
+    border: 1px solid #22c55e;
     font-family: Arial, sans-serif;
     font-size: 10pt;
     color: #000;
 }
 
-input[type="date"]:focus,
 input[type="text"]:focus,
 textarea:focus {
-    outline: 1px solid rgba(0, 123, 255, 0.5);
+    outline: 2px solid #16a34a;
     background: rgba(255, 255, 255, 0.9);
 }
 
@@ -90,7 +88,7 @@ textarea:focus {
     width: 190px;
 }
 
-/* TRÁMITE ADM - CORRECCIÓN: faltaba position absolute */
+/* TRÁMITE ADM */
 .campo-tramite {
     position: absolute;
     top: 22px;
@@ -170,6 +168,7 @@ textarea:focus {
     width: 24px;
     text-align: center;
     font-size: 9pt;
+    border: 1px solid #22c55e;
 }
 
 .control-manana-te {
@@ -179,6 +178,7 @@ textarea:focus {
     width: 18px;
     text-align: center;
     font-size: 9pt;
+    border: 1px solid #22c55e;
 }
 
 .control-manana-p {
@@ -188,6 +188,7 @@ textarea:focus {
     width: 16px;
     text-align: center;
     font-size: 9pt;
+    border: 1px solid #22c55e;
 }
 
 .control-manana-ta {
@@ -197,6 +198,7 @@ textarea:focus {
     width: 22px;
     text-align: center;
     font-size: 9pt;
+    border: 1px solid #22c55e;
 }
 
 /* CONTROLES ENFERMERÍA - TARDE */
@@ -207,6 +209,7 @@ textarea:focus {
     width: 24px;
     text-align: center;
     font-size: 9pt;
+    border: 1px solid #22c55e;
 }
 
 .control-tarde-te {
@@ -216,6 +219,7 @@ textarea:focus {
     width: 18px;
     text-align: center;
     font-size: 9pt;
+    border: 1px solid #22c55e;
 }
 
 .control-tarde-p {
@@ -225,6 +229,7 @@ textarea:focus {
     width: 16px;
     text-align: center;
     font-size: 9pt;
+    border: 1px solid #22c55e;
 }
 
 .control-tarde-ta {
@@ -234,6 +239,7 @@ textarea:focus {
     width: 22px;
     text-align: center;
     font-size: 9pt;
+    border: 1px solid #22c55e;
 }
 
 /* CONTROLES ENFERMERÍA - NOCHE */
@@ -244,6 +250,7 @@ textarea:focus {
     width: 24px;
     text-align: center;
     font-size: 9pt;
+    border: 1px solid #22c55e;
 }
 
 .control-noche-te {
@@ -253,6 +260,7 @@ textarea:focus {
     width: 18px;
     text-align: center;
     font-size: 9pt;
+    border: 1px solid #22c55e;
 }
 
 .control-noche-p {
@@ -262,6 +270,7 @@ textarea:focus {
     width: 16px;
     text-align: center;
     font-size: 9pt;
+    border: 1px solid #22c55e;
 }
 
 .control-noche-ta {
@@ -271,11 +280,12 @@ textarea:focus {
     width: 22px;
     text-align: center;
     font-size: 9pt;
+    border: 1px solid #22c55e;
 }
 
 /* OBSERVACIONES */
 #observaciones_enfermeria {
-    top: 620px;
+    top: 660px;
     left: 8px;
     width: 965px;
     height: 36px;
