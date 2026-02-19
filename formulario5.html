@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario 5 - Clínica Modelo</title>
+  <title>Formulario Nº 5</title>
   <style>
     @page {
       size: 340mm 220mm;
@@ -19,11 +19,11 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #e8e8e8;
-      padding: 15px;
+      background: #e5e5e5;
+      padding: 20px;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       min-height: 100vh;
     }
 
@@ -31,130 +31,112 @@
       width: 340mm;
       background: white;
       padding: 20mm;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .formulario {
+    .form-container {
       width: 260mm;
+      height: 197mm;
       border: 2px solid #000;
       margin: 0 auto;
-      font-size: 9px;
+      position: relative;
+      background: white;
     }
 
-    /* ENCABEZADO FILA 1 */
-    .header1 {
-      display: flex;
+    /* FILA 1: Fecha, Hab, Mutual, Dr, Pte */
+    .row1 {
+      display: grid;
+      grid-template-columns: 70px 50px 140px 90px 1fr;
       border-bottom: 1px solid #000;
-      height: 20px;
+      height: 18px;
     }
 
-    .h1-cell {
+    .cell {
       border-right: 1px solid #000;
-      padding: 2px 4px;
+      padding: 2px 5px;
       display: flex;
       align-items: center;
-      gap: 3px;
+      gap: 4px;
       font-size: 8px;
     }
 
-    .h1-cell:last-child {
+    .cell:last-child {
       border-right: none;
     }
 
-    .h1-fecha {
-      width: 85px;
+    .cell label {
+      font-weight: normal;
+      white-space: nowrap;
     }
 
-    .h1-hab {
-      width: 45px;
-    }
-
-    .h1-mutual {
-      width: 130px;
-    }
-
-    .h1-dr {
-      width: 90px;
-    }
-
-    .h1-pte {
-      flex: 1;
-    }
-
-    .h1-cell input {
+    .cell input[type="date"],
+    .cell input[type="text"] {
       border: none;
-      border-bottom: 1px dotted #000;
-      font-size: 8px;
-      padding: 0 2px;
-      background: transparent;
       flex: 1;
-    }
-
-    /* ENCABEZADO FILA 2 */
-    .header2 {
-      display: flex;
-      border-bottom: 2px solid #000;
-      height: 22px;
       font-size: 8px;
-      font-weight: bold;
-      text-transform: uppercase;
+      padding: 0;
+      background: transparent;
     }
 
-    .h2-tramite {
-      width: 170px;
+    /* FILA 2: Trámite, Indicaciones, Diagnóstico */
+    .row2 {
+      display: grid;
+      grid-template-columns: 200px 1fr 180px;
+      border-bottom: 2px solid #000;
+      height: 20px;
+      font-size: 8px;
+    }
+
+    .row2>div {
       border-right: 1px solid #000;
-      padding: 4px 6px;
+      padding: 3px 6px;
       display: flex;
       align-items: center;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .row2>div:last-child {
+      border-right: none;
+    }
+
+    .tramite-adm {
       justify-content: space-between;
     }
 
-    .h2-indicaciones {
-      flex: 1;
-      border-right: 1px solid #000;
+    .checkbox-group {
       display: flex;
+      gap: 12px;
       align-items: center;
-      justify-content: center;
-      padding: 4px;
     }
 
-    .h2-diagnostico {
-      width: 180px;
+    .checkbox-group label {
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 4px;
-    }
-
-    .radio-opts {
-      display: flex;
-      gap: 8px;
-      font-size: 8px;
-    }
-
-    .radio-opts label {
-      display: flex;
-      align-items: center;
-      gap: 2px;
+      gap: 3px;
       font-weight: normal;
     }
 
-    /* LÍNEAS PARA INDICACIONES */
-    .lineas {
-      padding: 4px 8px;
+    .row2 .centered {
+      justify-content: center;
+    }
+
+    /* LÍNEAS PUNTEADAS */
+    .lines-section {
+      padding: 5px 10px;
       border-bottom: 1px solid #000;
     }
 
-    .linea {
-      height: 14px;
-      border-bottom: 1px dotted #000;
+    .dotted-line {
+      border-bottom: 1px dotted #333;
+      height: 13px;
       margin: 0;
     }
 
     /* DIETA */
-    .dieta-sec {
+    .dieta-section {
       border-bottom: 1px solid #000;
-      padding: 4px 8px;
+      padding: 4px 10px;
     }
 
     .dieta-label {
@@ -165,46 +147,45 @@
 
     .dieta-input {
       border: none;
-      border-bottom: 1px dotted #000;
+      border-bottom: 1px dotted #333;
       width: 100%;
       font-size: 8px;
-      padding: 1px 2px;
+      padding: 1px 0;
       background: transparent;
     }
 
     /* TABLA PRINCIPAL */
-    .tabla-main {
-      display: flex;
-      height: 130mm;
+    .main-table {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      height: 125mm;
     }
 
-    .col-hidra {
-      width: 110px;
+    .hidratacion-col {
       border-right: 1px solid #000;
-      padding: 6px;
+      padding: 8px 6px;
     }
 
-    .col-hidra label {
+    .hidratacion-col label {
       font-size: 9px;
-      font-weight: bold;
+      font-weight: normal;
       display: block;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
 
-    .col-hidra input {
+    .hidratacion-col input {
       width: 100%;
       border: none;
-      border-bottom: 1px dotted #000;
+      border-bottom: 1px dotted #333;
       font-size: 8px;
-      padding: 1px;
+      padding: 1px 0;
       background: transparent;
     }
 
-    .grid-cols {
-      flex: 1;
+    .right-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 30px 1fr auto;
+      grid-template-rows: 28px 1fr;
     }
 
     .col-header {
@@ -215,9 +196,9 @@
       justify-content: center;
       text-align: center;
       font-size: 8px;
-      font-weight: bold;
-      padding: 3px;
-      line-height: 1.2;
+      font-weight: normal;
+      padding: 4px 2px;
+      line-height: 1.1;
     }
 
     .col-header:last-child {
@@ -226,100 +207,114 @@
 
     .col-body {
       border-right: 1px solid #000;
-      padding: 6px 4px;
-      font-size: 8px;
+      padding: 8px 5px;
     }
 
     .col-body:last-child {
       border-right: none;
     }
 
-    .time-row {
-      margin-bottom: 4px;
+    .diuresis-col {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
 
-    .time-label {
+    .diuresis-item {
       font-size: 7px;
-      margin-bottom: 1px;
     }
 
-    .time-input {
+    .diuresis-item span {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .diuresis-item input {
       width: 100%;
       border: none;
-      border-bottom: 1px dotted #000;
+      border-bottom: 1px dotted #333;
       font-size: 7px;
-      padding: 1px;
+      padding: 1px 0;
       background: transparent;
     }
 
-    /* CONTROLES DE ENFERMERÍA */
-    .controles {
+    .simple-col {
+      padding-top: 4px;
+    }
+
+    .simple-col input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px dotted #333;
+      font-size: 7px;
+      padding: 1px 0;
+      background: transparent;
+    }
+
+    .controles-col {
       grid-column: span 4;
       border-top: 1px solid #000;
       padding: 6px;
     }
 
     .controles-title {
+      font-size: 8px;
       text-align: center;
-      font-size: 9px;
-      font-weight: bold;
-      margin-bottom: 5px;
-      padding-bottom: 3px;
+      margin-bottom: 6px;
+      padding-bottom: 4px;
       border-bottom: 1px solid #000;
     }
 
     .controles-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
+      gap: 10px;
     }
 
-    .ctrl-turno {
+    .turno-block {
       text-align: center;
     }
 
-    .ctrl-turno-title {
-      font-size: 8px;
+    .turno-name {
+      font-size: 7px;
       font-weight: bold;
       margin-bottom: 3px;
     }
 
-    .ctrl-labels {
+    .turno-labels {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      font-size: 7px;
-      font-weight: bold;
-      margin-bottom: 2px;
+      gap: 2px;
+      font-size: 6px;
+      margin-bottom: 3px;
     }
 
-    .ctrl-input {
+    .turno-input {
       width: 100%;
       border: none;
-      border-bottom: 1px dotted #000;
+      border-bottom: 1px dotted #333;
       font-size: 7px;
       text-align: center;
-      padding: 1px;
+      padding: 1px 0;
       background: transparent;
     }
 
     /* OBSERVACIONES */
-    .obs {
+    .observaciones {
       border-top: 1px solid #000;
-      padding: 5px 8px;
-      height: 50px;
+      padding: 5px 10px;
+      height: 48px;
     }
 
-    .obs label {
+    .observaciones label {
       font-size: 8px;
-      font-weight: bold;
       display: block;
       margin-bottom: 2px;
     }
 
-    .obs textarea {
+    .observaciones textarea {
       width: 100%;
-      height: calc(100% - 15px);
+      height: calc(100% - 18px);
       border: none;
       font-family: Arial, sans-serif;
       font-size: 8px;
@@ -328,19 +323,27 @@
       line-height: 1.3;
     }
 
-    textarea:focus,
-    input:focus {
+    /* FORMULARIO Nº 5 */
+    .form-number {
+      position: absolute;
+      bottom: 52px;
+      left: 10px;
+      font-size: 8px;
+    }
+
+    input:focus,
+    textarea:focus {
       outline: none;
     }
 
-    /* BOTÓN */
-    .acciones {
+    /* BOTÓN Y MENSAJE */
+    .actions {
       margin-top: 20px;
       text-align: center;
     }
 
-    .btn {
-      padding: 10px 35px;
+    .btn-submit {
+      padding: 10px 30px;
       background: white;
       border: 2px solid #000;
       font-size: 10px;
@@ -350,18 +353,18 @@
       letter-spacing: 0.5px;
     }
 
-    .btn:hover {
+    .btn-submit:hover {
       background: #000;
       color: white;
     }
 
-    .btn:disabled {
+    .btn-submit:disabled {
       opacity: 0.5;
       cursor: not-allowed;
     }
 
-    .msg {
-      margin-top: 12px;
+    .message {
+      margin-top: 15px;
       padding: 10px;
       border: 2px solid #000;
       text-align: center;
@@ -369,11 +372,11 @@
       display: none;
     }
 
-    .msg.ok {
+    .message.success {
       background: #e8f5e9;
     }
 
-    .msg.err {
+    .message.error {
       background: #ffebee;
     }
 
@@ -387,7 +390,7 @@
         box-shadow: none;
       }
 
-      .acciones {
+      .actions {
         display: none;
       }
     }
@@ -398,8 +401,9 @@
         padding: 10px;
       }
 
-      .formulario {
+      .form-container {
         width: 100%;
+        height: auto;
       }
     }
   </style>
@@ -407,141 +411,144 @@
 
 <body>
   <div class="page">
-    <form id="form5">
-      <div class="formulario">
+    <form id="formulario5">
+      <div class="form-container">
 
         <!-- FILA 1 -->
-        <div class="header1">
-          <div class="h1-cell h1-fecha">
+        <div class="row1">
+          <div class="cell">
             <label>Fecha</label>
             <input type="date" id="fecha" required>
           </div>
-          <div class="h1-cell h1-hab">
+          <div class="cell">
             <label>Hab.:</label>
             <input type="text">
           </div>
-          <div class="h1-cell h1-mutual">
+          <div class="cell">
             <label>Mutual:</label>
             <input type="text">
           </div>
-          <div class="h1-cell h1-dr">
+          <div class="cell">
             <label>Dr.:</label>
             <input type="text">
           </div>
-          <div class="h1-cell h1-pte">
+          <div class="cell">
             <label>Pte.:</label>
             <input type="text">
           </div>
         </div>
 
         <!-- FILA 2 -->
-        <div class="header2">
-          <div class="h2-tramite">
+        <div class="row2">
+          <div class="tramite-adm">
             <span>TRÁMITE ADM.:</span>
-            <div class="radio-opts">
-              <label><input type="radio" name="tadm" value="SI"> SI</label>
-              <label><input type="radio" name="tadm" value="NO"> NO</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="tramite" value="SI"> SI</label>
+              <label><input type="checkbox" name="tramite" value="NO"> NO</label>
             </div>
           </div>
-          <div class="h2-indicaciones">INDICACIONES MÉDICAS</div>
-          <div class="h2-diagnostico">DIAGNÓSTICO:</div>
+          <div class="centered">INDICACIONES MÉDICAS</div>
+          <div class="centered">DIAGNÓSTICO:</div>
         </div>
 
-        <!-- LÍNEAS -->
-        <div class="lineas">
-          <div class="linea"></div>
-          <div class="linea"></div>
-          <div class="linea"></div>
-          <div class="linea"></div>
-          <div class="linea"></div>
-          <div class="linea"></div>
-          <div class="linea"></div>
-          <div class="linea"></div>
-          <div class="linea"></div>
-          <div class="linea"></div>
+        <!-- LÍNEAS PUNTEADAS -->
+        <div class="lines-section">
+          <div class="dotted-line"></div>
+          <div class="dotted-line"></div>
+          <div class="dotted-line"></div>
+          <div class="dotted-line"></div>
+          <div class="dotted-line"></div>
+          <div class="dotted-line"></div>
+          <div class="dotted-line"></div>
+          <div class="dotted-line"></div>
+          <div class="dotted-line"></div>
+          <div class="dotted-line"></div>
+          <div class="dotted-line"></div>
+          <div class="dotted-line"></div>
+          <div class="dotted-line"></div>
         </div>
 
         <!-- DIETA -->
-        <div class="dieta-sec">
+        <div class="dieta-section">
           <div class="dieta-label">DIETA:</div>
           <input type="text" class="dieta-input" id="dieta">
         </div>
 
-        <!-- TABLA -->
-        <div class="tabla-main">
-          <div class="col-hidra">
+        <!-- TABLA PRINCIPAL -->
+        <div class="main-table">
+          <div class="hidratacion-col">
             <label>Hidratación:</label>
-            <input type="text" id="hidra">
+            <input type="text" id="hidratacion">
           </div>
 
-          <div class="grid-cols">
+          <div class="right-grid">
             <!-- HEADERS -->
-            <div class="col-header">DIURESIS</div>
-            <div class="col-header">DRENAJES</div>
-            <div class="col-header">S N G<br>VÓMITOS</div>
-            <div class="col-header">DEPOSICIONES</div>
+            <div class="col-header">Diuresis</div>
+            <div class="col-header">Drenajes</div>
+            <div class="col-header">S N G<br>Vómitos</div>
+            <div class="col-header">Deposiciones</div>
 
             <!-- BODIES -->
-            <div class="col-body">
-              <div class="time-row">
-                <div class="time-label">05 a 13=</div>
-                <input type="text" class="time-input" id="d1">
+            <div class="col-body diuresis-col">
+              <div class="diuresis-item">
+                <span>05 a 13=</span>
+                <input type="text" id="diuresis_manana">
               </div>
-              <div class="time-row">
-                <div class="time-label">13 a 21=</div>
-                <input type="text" class="time-input" id="d2">
+              <div class="diuresis-item">
+                <span>13 a 21=</span>
+                <input type="text" id="diuresis_tarde">
               </div>
-              <div class="time-row">
-                <div class="time-label">21 a 5=</div>
-                <input type="text" class="time-input" id="d3">
+              <div class="diuresis-item">
+                <span>21 a 5=</span>
+                <input type="text" id="diuresis_noche">
               </div>
             </div>
 
-            <div class="col-body">
-              <input type="text" class="time-input" id="dren">
+            <div class="col-body simple-col">
+              <input type="text" id="drenajes">
             </div>
 
-            <div class="col-body">
-              <input type="text" class="time-input" id="sng">
+            <div class="col-body simple-col">
+              <input type="text" id="sng_vomitos">
             </div>
 
-            <div class="col-body">
-              <input type="text" class="time-input" id="depo">
+            <div class="col-body simple-col">
+              <input type="text" id="deposiciones">
             </div>
 
-            <!-- CONTROLES -->
-            <div class="controles">
+            <!-- CONTROLES DE ENFERMERÍA -->
+            <div class="col-body controles-col">
               <div class="controles-title">Controles de Enfermería</div>
               <div class="controles-grid">
-                <div class="ctrl-turno">
-                  <div class="ctrl-turno-title">MAÑANA</div>
-                  <div class="ctrl-labels">
+                <div class="turno-block">
+                  <div class="turno-name">MAÑANA</div>
+                  <div class="turno-labels">
                     <div>F.R.</div>
                     <div>Te.</div>
                     <div>P.</div>
                     <div>T.A.</div>
                   </div>
-                  <input type="text" class="ctrl-input">
+                  <input type="text" class="turno-input">
                 </div>
-                <div class="ctrl-turno">
-                  <div class="ctrl-turno-title">TARDE</div>
-                  <div class="ctrl-labels">
+                <div class="turno-block">
+                  <div class="turno-name">TARDE</div>
+                  <div class="turno-labels">
                     <div>F.R.</div>
                     <div>Te.</div>
                     <div>P.</div>
                     <div>T.A.</div>
                   </div>
-                  <input type="text" class="ctrl-input">
+                  <input type="text" class="turno-input">
                 </div>
-                <div class="ctrl-turno">
-                  <div class="ctrl-turno-title">NOCHE</div>
-                  <div class="ctrl-labels">
+                <div class="turno-block">
+                  <div class="turno-name">NOCHE</div>
+                  <div class="turno-labels">
                     <div>F.R.</div>
                     <div>Te.</div>
                     <div>P.</div>
                     <div>T.A.</div>
                   </div>
-                  <input type="text" class="ctrl-input">
+                  <input type="text" class="turno-input">
                 </div>
               </div>
             </div>
@@ -549,31 +556,34 @@
         </div>
 
         <!-- OBSERVACIONES -->
-        <div class="obs">
+        <div class="observaciones">
           <label>Observaciones de Enfermería:</label>
-          <textarea id="obs"></textarea>
+          <textarea id="observaciones_enfermeria"></textarea>
         </div>
+
+        <!-- FORMULARIO Nº 5 -->
+        <div class="form-number">FORMULARIO Nº 5</div>
 
       </div>
 
-      <div class="acciones">
-        <button type="submit" class="btn">Enviar Formulario</button>
+      <div class="actions">
+        <button type="submit" class="btn-submit">Enviar Formulario</button>
       </div>
     </form>
 
-    <div id="msg" class="msg"></div>
+    <div id="message" class="message"></div>
   </div>
 
   <script>
-    const WH = 'https://n8n-production-0142.up.railway.app/webhook/formulario5';
+    const WEBHOOK = 'https://n8n-production-0142.up.railway.app/webhook/formulario5';
 
     document.getElementById('fecha').valueAsDate = new Date();
 
-    document.getElementById('form5').addEventListener('submit', async (e) => {
+    document.getElementById('formulario5').addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      const btn = e.target.querySelector('.btn');
-      const msg = document.getElementById('msg');
+      const btn = document.querySelector('.btn-submit');
+      const msg = document.getElementById('message');
 
       btn.disabled = true;
       btn.textContent = 'ENVIANDO...';
@@ -582,41 +592,41 @@
         fecha: document.getElementById('fecha').value,
         turno: "No especificado",
         profesional: "No especificado",
-        tramite_adm: document.querySelector('input[name="tadm"]:checked')?.value || "",
+        tramite_adm: document.querySelector('input[name="tramite"]:checked')?.value || "",
         indicaciones_medicas: "",
         diagnostico: "",
         dieta: document.getElementById('dieta').value,
-        hidratacion: document.getElementById('hidra').value,
-        diuresis_manana: document.getElementById('d1').value,
-        diuresis_tarde: document.getElementById('d2').value,
-        diuresis_noche: document.getElementById('d3').value,
-        drenajes: document.getElementById('dren').value,
-        sng_vomitos: document.getElementById('sng').value,
-        deposiciones: document.getElementById('depo').value,
+        hidratacion: document.getElementById('hidratacion').value,
+        diuresis_manana: document.getElementById('diuresis_manana').value,
+        diuresis_tarde: document.getElementById('diuresis_tarde').value,
+        diuresis_noche: document.getElementById('diuresis_noche').value,
+        drenajes: document.getElementById('drenajes').value,
+        sng_vomitos: document.getElementById('sng_vomitos').value,
+        deposiciones: document.getElementById('deposiciones').value,
         controles_enfermeria: "",
-        observaciones_enfermeria: document.getElementById('obs').value
+        observaciones_enfermeria: document.getElementById('observaciones_enfermeria').value
       };
 
       try {
-        const r = await fetch(WH, {
+        const response = await fetch(WEBHOOK, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
         });
 
-        if (r.ok) {
-          msg.className = 'msg ok';
+        if (response.ok) {
+          msg.className = 'message success';
           msg.style.display = 'block';
           msg.textContent = '✓ FORMULARIO ENVIADO CORRECTAMENTE';
-          document.getElementById('form5').reset();
+          document.getElementById('formulario5').reset();
           document.getElementById('fecha').valueAsDate = new Date();
         } else {
           throw new Error();
         }
-      } catch {
-        msg.className = 'msg err';
+      } catch (error) {
+        msg.className = 'message error';
         msg.style.display = 'block';
-        msg.textContent = '✗ ERROR AL ENVIAR';
+        msg.textContent = '✗ ERROR AL ENVIAR EL FORMULARIO';
       } finally {
         btn.disabled = false;
         btn.textContent = 'ENVIAR FORMULARIO';
