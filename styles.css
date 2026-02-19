@@ -37,16 +37,33 @@ body {
     background-position: center;
 }
 
-input[type="text"],
-input[type="checkbox"],
+input[type="text"] {
+    background: transparent;
+    border: 1px solid #22c55e;
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+    color: #000;
+}
+
+input[type="checkbox"] {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    accent-color: #22c55e;
+}
+
 textarea {
     background: transparent;
     border: 1px solid #22c55e;
     font-family: Arial, sans-serif;
     font-size: 10pt;
     color: #000;
+    resize: none;
+    overflow-y: auto;
     vertical-align: top;
+    padding: 2px;
     text-align: left;
+    display: block;
 }
 
 input[type="text"]:focus,
@@ -55,20 +72,13 @@ textarea:focus {
     background: rgba(255, 255, 255, 0.9);
 }
 
-textarea {
-    vertical-align: top;
-    padding: 2px;
-    resize: none;
-    overflow-y: auto;
-}
-
 .campo {
     position: absolute;
 }
 
 #fecha {
     top: 31px;
-    left: 96px;
+    left: 81px;
     width: 95px;
 }
 
@@ -92,24 +102,23 @@ textarea {
 
 #pte {
     top: 31px;
-    left: 730px;
+    left: 740px;
     width: 185px;
 }
 
 .campo-tramite {
     position: absolute;
-    top: 47px;
+    top: 48px;
     left: 144px;
     display: flex;
     gap: 18px;
 }
 
 #dieta {
-    top: 358px;
+    top: 356px;
     left: 95px;
     width: 810px;
     height: 22px;
-    resize: none;
     overflow-y: hidden;
 }
 
@@ -119,8 +128,6 @@ textarea {
     width: 270px;
     height: 185px;
     padding: 2px;
-    resize: none;
-    overflow-y: auto;
 }
 
 #diuresis_manana {
@@ -162,11 +169,11 @@ textarea {
     height: 155px;
 }
 
-/* CONTROLES MAÑANA — +30px derecha, más separados */
+/* CONTROLES MAÑANA — 140px izquierda, separados 35px entre sí */
 .control-manana-fr {
     position: absolute;
     top: 448px;
-    left: 878px;
+    left: 738px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -176,7 +183,7 @@ textarea {
 .control-manana-te {
     position: absolute;
     top: 448px;
-    left: 903px;
+    left: 773px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -186,7 +193,7 @@ textarea {
 .control-manana-p {
     position: absolute;
     top: 448px;
-    left: 928px;
+    left: 808px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -196,18 +203,18 @@ textarea {
 .control-manana-ta {
     position: absolute;
     top: 448px;
-    left: 953px;
+    left: 843px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES TARDE — +30px derecha, 3px arriba */
+/* CONTROLES TARDE */
 .control-tarde-fr {
     position: absolute;
     top: 507px;
-    left: 878px;
+    left: 738px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -217,7 +224,7 @@ textarea {
 .control-tarde-te {
     position: absolute;
     top: 507px;
-    left: 903px;
+    left: 773px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -227,7 +234,7 @@ textarea {
 .control-tarde-p {
     position: absolute;
     top: 507px;
-    left: 928px;
+    left: 808px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -237,18 +244,18 @@ textarea {
 .control-tarde-ta {
     position: absolute;
     top: 507px;
-    left: 953px;
+    left: 843px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES NOCHE — +30px derecha, 7px abajo */
+/* CONTROLES NOCHE */
 .control-noche-fr {
     position: absolute;
     top: 570px;
-    left: 878px;
+    left: 738px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -258,7 +265,7 @@ textarea {
 .control-noche-te {
     position: absolute;
     top: 570px;
-    left: 903px;
+    left: 773px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -268,7 +275,7 @@ textarea {
 .control-noche-p {
     position: absolute;
     top: 570px;
-    left: 928px;
+    left: 808px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -278,7 +285,7 @@ textarea {
 .control-noche-ta {
     position: absolute;
     top: 570px;
-    left: 953px;
+    left: 843px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
