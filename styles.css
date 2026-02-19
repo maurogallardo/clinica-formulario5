@@ -75,7 +75,6 @@ textarea:focus {
     position: absolute;
 }
 
-/* FILA SUPERIOR */
 #fecha {
     top: 31px;
     left: 71px;
@@ -169,11 +168,11 @@ textarea:focus {
     height: 155px;
 }
 
-/* CONTROLES MAÑANA — 40px derecha, 20px entre cuadros */
+/* CONTROLES MAÑANA — +30px derecha */
 .control-manana-fr {
     position: absolute;
     top: 448px;
-    left: 778px;
+    left: 808px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -183,7 +182,7 @@ textarea:focus {
 .control-manana-te {
     position: absolute;
     top: 448px;
-    left: 800px;
+    left: 830px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -193,7 +192,7 @@ textarea:focus {
 .control-manana-p {
     position: absolute;
     top: 448px;
-    left: 822px;
+    left: 852px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -203,18 +202,18 @@ textarea:focus {
 .control-manana-ta {
     position: absolute;
     top: 448px;
-    left: 844px;
+    left: 874px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES TARDE */
+/* CONTROLES TARDE — +30px derecha */
 .control-tarde-fr {
     position: absolute;
     top: 507px;
-    left: 778px;
+    left: 808px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -224,7 +223,7 @@ textarea:focus {
 .control-tarde-te {
     position: absolute;
     top: 507px;
-    left: 800px;
+    left: 830px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -234,7 +233,7 @@ textarea:focus {
 .control-tarde-p {
     position: absolute;
     top: 507px;
-    left: 822px;
+    left: 852px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -244,18 +243,18 @@ textarea:focus {
 .control-tarde-ta {
     position: absolute;
     top: 507px;
-    left: 844px;
+    left: 874px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES NOCHE */
+/* CONTROLES NOCHE — +30px derecha */
 .control-noche-fr {
     position: absolute;
     top: 570px;
-    left: 778px;
+    left: 808px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -265,7 +264,7 @@ textarea:focus {
 .control-noche-te {
     position: absolute;
     top: 570px;
-    left: 800px;
+    left: 830px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -275,7 +274,7 @@ textarea:focus {
 .control-noche-p {
     position: absolute;
     top: 570px;
-    left: 822px;
+    left: 852px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -285,7 +284,7 @@ textarea:focus {
 .control-noche-ta {
     position: absolute;
     top: 570px;
-    left: 844px;
+    left: 874px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
