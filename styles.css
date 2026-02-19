@@ -28,7 +28,7 @@ body {
 
 .form-container {
     width: 982px;
-    height: 745px;
+    height: 760px;
     margin: 0 auto;
     position: relative;
     background-image: url('formulario5-bg.png');
@@ -59,8 +59,7 @@ textarea:focus {
     position: absolute;
 }
 
-/* Factor escala: X=0.2446, Y=0.2867 */
-/* CAMPOS */
+/* FILA SUPERIOR */
 #fecha {
     top: 10px;
     left: 11px;
@@ -91,92 +90,202 @@ textarea:focus {
     width: 190px;
 }
 
+/* TRÁMITE ADM - CORRECCIÓN: faltaba position absolute */
 .campo-tramite {
+    position: absolute;
     top: 22px;
     left: 110px;
     display: flex;
     gap: 8px;
 }
 
+/* DIETA */
 #dieta {
-    top: 637px;
-    left: 8px;
-    width: 965px;
+    top: 400px;
+    left: 55px;
+    width: 920px;
 }
 
+/* HIDRATACIÓN */
 #hidratacion {
-    top: 655px;
+    top: 430px;
     left: 8px;
-    width: 325px;
-    height: 82px;
+    width: 295px;
+    height: 165px;
     padding: 3px;
+    resize: none;
 }
 
+/* DIURESIS */
 #diuresis_manana {
-    top: 665px;
-    left: 340px;
-    width: 80px;
+    top: 448px;
+    left: 640px;
+    width: 68px;
 }
 
 #diuresis_tarde {
-    top: 690px;
-    left: 340px;
-    width: 80px;
+    top: 500px;
+    left: 640px;
+    width: 68px;
 }
 
 #diuresis_noche {
-    top: 715px;
-    left: 340px;
-    width: 80px;
+    top: 553px;
+    left: 640px;
+    width: 68px;
 }
 
+/* DRENAJES */
 #drenajes {
-    top: 665px;
-    left: 430px;
-    width: 105px;
+    top: 430px;
+    left: 715px;
+    width: 70px;
+    height: 165px;
+    resize: none;
 }
 
+/* SNG VOMITOS */
 #sng_vomitos {
-    top: 665px;
-    left: 545px;
-    width: 105px;
+    top: 430px;
+    left: 790px;
+    width: 68px;
+    height: 165px;
+    resize: none;
 }
 
+/* DEPOSICIONES */
 #deposiciones {
-    top: 665px;
-    left: 660px;
-    width: 105px;
+    top: 430px;
+    left: 863px;
+    width: 68px;
+    height: 165px;
+    resize: none;
 }
 
-.controles-enfermeria {
-    top: 705px;
-    left: 775px;
-    width: 200px;
-}
-
-.turno {
-    display: flex;
-    gap: 2px;
-    margin-bottom: 3px;
-}
-
-.turno input {
-    width: 48px;
+/* CONTROLES ENFERMERÍA - MAÑANA */
+.control-manana-fr {
+    position: absolute;
+    top: 455px;
+    left: 937px;
+    width: 24px;
     text-align: center;
     font-size: 9pt;
 }
 
+.control-manana-te {
+    position: absolute;
+    top: 455px;
+    left: 952px;
+    width: 18px;
+    text-align: center;
+    font-size: 9pt;
+}
+
+.control-manana-p {
+    position: absolute;
+    top: 455px;
+    left: 964px;
+    width: 16px;
+    text-align: center;
+    font-size: 9pt;
+}
+
+.control-manana-ta {
+    position: absolute;
+    top: 455px;
+    left: 975px;
+    width: 22px;
+    text-align: center;
+    font-size: 9pt;
+}
+
+/* CONTROLES ENFERMERÍA - TARDE */
+.control-tarde-fr {
+    position: absolute;
+    top: 505px;
+    left: 937px;
+    width: 24px;
+    text-align: center;
+    font-size: 9pt;
+}
+
+.control-tarde-te {
+    position: absolute;
+    top: 505px;
+    left: 952px;
+    width: 18px;
+    text-align: center;
+    font-size: 9pt;
+}
+
+.control-tarde-p {
+    position: absolute;
+    top: 505px;
+    left: 964px;
+    width: 16px;
+    text-align: center;
+    font-size: 9pt;
+}
+
+.control-tarde-ta {
+    position: absolute;
+    top: 505px;
+    left: 975px;
+    width: 22px;
+    text-align: center;
+    font-size: 9pt;
+}
+
+/* CONTROLES ENFERMERÍA - NOCHE */
+.control-noche-fr {
+    position: absolute;
+    top: 558px;
+    left: 937px;
+    width: 24px;
+    text-align: center;
+    font-size: 9pt;
+}
+
+.control-noche-te {
+    position: absolute;
+    top: 558px;
+    left: 952px;
+    width: 18px;
+    text-align: center;
+    font-size: 9pt;
+}
+
+.control-noche-p {
+    position: absolute;
+    top: 558px;
+    left: 964px;
+    width: 16px;
+    text-align: center;
+    font-size: 9pt;
+}
+
+.control-noche-ta {
+    position: absolute;
+    top: 558px;
+    left: 975px;
+    width: 22px;
+    text-align: center;
+    font-size: 9pt;
+}
+
+/* OBSERVACIONES */
 #observaciones_enfermeria {
-    top: 747px;
+    top: 620px;
     left: 8px;
     width: 965px;
-    height: 38px;
+    height: 36px;
     resize: none;
     font-size: 9pt;
     line-height: 1.3;
     padding: 2px;
 }
 
+/* BOTÓN Y MENSAJES */
 .actions {
     margin-top: 10mm;
     text-align: center;
