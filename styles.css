@@ -57,10 +57,9 @@ textarea:focus {
     position: absolute;
 }
 
-/* FILA SUPERIOR — todos 1px arriba */
 #fecha {
     top: 31px;
-    left: 76px;
+    left: 86px;
     width: 95px;
 }
 
@@ -88,7 +87,6 @@ textarea:focus {
     width: 200px;
 }
 
-/* TRÁMITE ADM — sin cambios */
 .campo-tramite {
     position: absolute;
     top: 47px;
@@ -97,14 +95,12 @@ textarea:focus {
     gap: 18px;
 }
 
-/* DIETA — 10px más angosto de cada lado */
 #dieta {
     top: 358px;
     left: 95px;
     width: 810px;
 }
 
-/* HIDRATACIÓN — sin cambios */
 #hidratacion {
     top: 393px;
     left: 125px;
@@ -114,57 +110,52 @@ textarea:focus {
     resize: none;
 }
 
-/* DIURESIS */
 #diuresis_manana {
-    top: 443px;
+    top: 448px;
     left: 443px;
     width: 60px;
 }
 
 #diuresis_tarde {
-    top: 515px;
+    top: 525px;
     left: 443px;
     width: 60px;
 }
 
 #diuresis_noche {
-    top: 583px;
+    top: 593px;
     left: 443px;
     width: 60px;
 }
 
-/* DRENAJES — 3px izquierda */
 #drenajes {
     top: 425px;
-    left: 539px;
+    left: 536px;
     width: 60px;
     height: 155px;
     resize: none;
 }
 
-/* SNG VOMITOS — 5px derecha */
 #sng_vomitos {
     top: 425px;
-    left: 635px;
+    left: 640px;
     width: 60px;
     height: 155px;
     resize: none;
 }
 
-/* DEPOSICIONES — 10px derecha */
 #deposiciones {
     top: 425px;
-    left: 723px;
+    left: 733px;
     width: 60px;
     height: 155px;
     resize: none;
 }
 
-/* CONTROLES ENFERMERÍA MAÑANA — 25px derecha */
 .control-manana-fr {
     position: absolute;
     top: 448px;
-    left: 823px;
+    left: 848px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -174,7 +165,7 @@ textarea:focus {
 .control-manana-te {
     position: absolute;
     top: 448px;
-    left: 846px;
+    left: 871px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -184,7 +175,7 @@ textarea:focus {
 .control-manana-p {
     position: absolute;
     top: 448px;
-    left: 869px;
+    left: 894px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -194,18 +185,17 @@ textarea:focus {
 .control-manana-ta {
     position: absolute;
     top: 448px;
-    left: 892px;
+    left: 917px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES ENFERMERÍA TARDE — 25px derecha, 5px arriba */
 .control-tarde-fr {
     position: absolute;
     top: 510px;
-    left: 823px;
+    left: 848px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -215,7 +205,7 @@ textarea:focus {
 .control-tarde-te {
     position: absolute;
     top: 510px;
-    left: 846px;
+    left: 871px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -225,7 +215,7 @@ textarea:focus {
 .control-tarde-p {
     position: absolute;
     top: 510px;
-    left: 869px;
+    left: 894px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -235,18 +225,17 @@ textarea:focus {
 .control-tarde-ta {
     position: absolute;
     top: 510px;
-    left: 892px;
+    left: 917px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES ENFERMERÍA NOCHE — 25px derecha, 10px arriba */
 .control-noche-fr {
     position: absolute;
-    top: 573px;
-    left: 823px;
+    top: 563px;
+    left: 848px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -255,8 +244,8 @@ textarea:focus {
 
 .control-noche-te {
     position: absolute;
-    top: 573px;
-    left: 846px;
+    top: 563px;
+    left: 871px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -265,8 +254,8 @@ textarea:focus {
 
 .control-noche-p {
     position: absolute;
-    top: 573px;
-    left: 869px;
+    top: 563px;
+    left: 894px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -275,19 +264,18 @@ textarea:focus {
 
 .control-noche-ta {
     position: absolute;
-    top: 573px;
-    left: 892px;
+    top: 563px;
+    left: 917px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* OBSERVACIONES — 40px más angosto, 25px derecha */
 #observaciones_enfermeria {
     top: 625px;
-    left: 178px;
-    width: 675px;
+    left: 203px;
+    width: 635px;
     height: 36px;
     resize: none;
     font-size: 9pt;
