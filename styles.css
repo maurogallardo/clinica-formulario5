@@ -57,114 +57,114 @@ textarea:focus {
     position: absolute;
 }
 
-/* FILA SUPERIOR — subido 10px */
+/* FILA SUPERIOR */
 #fecha {
     top: 32px;
-    left: 11px;
+    left: 31px;
     width: 95px;
 }
 
 #hab {
     top: 32px;
-    left: 175px;
+    left: 190px;
     width: 45px;
 }
 
 #mutual {
     top: 32px;
-    left: 230px;
+    left: 250px;
     width: 125px;
 }
 
 #dr {
     top: 32px;
-    left: 365px;
+    left: 405px;
     width: 140px;
 }
 
 #pte {
     top: 32px;
-    left: 520px;
+    left: 625px;
     width: 200px;
 }
 
-/* TRÁMITE ADM — subido 10px */
+/* TRÁMITE ADM */
 .campo-tramite {
     position: absolute;
     top: 48px;
-    left: 110px;
+    left: 130px;
     display: flex;
     gap: 8px;
 }
 
-/* DIETA — bajado 20px, ancho achicado 30px */
+/* DIETA — bajado 7px, ancho achicado 20px */
 #dieta {
-    top: 348px;
+    top: 355px;
     left: 55px;
-    width: 890px;
+    width: 870px;
 }
 
-/* HIDRATACIÓN — bajado 15px, movido 10px a la izquierda */
+/* HIDRATACIÓN — bajado 15px, ensanchado 30px izquierda y 20px derecha */
 #hidratacion {
-    top: 390px;
-    left: 155px;
-    width: 210px;
+    top: 405px;
+    left: 125px;
+    width: 260px;
     height: 155px;
     padding: 3px;
     resize: none;
 }
 
-/* DIURESIS — bajado 15px, movido 20px a la derecha */
+/* DIURESIS — bajado 20px, movido 40px a la derecha */
 #diuresis_manana {
-    top: 403px;
-    left: 413px;
+    top: 423px;
+    left: 453px;
     width: 60px;
 }
 
 #diuresis_tarde {
-    top: 450px;
-    left: 413px;
+    top: 470px;
+    left: 453px;
     width: 60px;
 }
 
 #diuresis_noche {
-    top: 498px;
-    left: 413px;
+    top: 518px;
+    left: 453px;
     width: 60px;
 }
 
-/* DRENAJES — bajado 15px, movido 20px a la derecha */
+/* DRENAJES — bajado 20px, movido 40px a la derecha */
 #drenajes {
-    top: 390px;
-    left: 482px;
+    top: 410px;
+    left: 522px;
     width: 60px;
     height: 155px;
     resize: none;
 }
 
-/* SNG VOMITOS — bajado 15px, movido 20px a la derecha */
+/* SNG VOMITOS — bajado 20px, movido 40px a la derecha */
 #sng_vomitos {
-    top: 390px;
-    left: 555px;
+    top: 410px;
+    left: 595px;
     width: 60px;
     height: 155px;
     resize: none;
 }
 
-/* DEPOSICIONES — bajado 15px, movido 20px a la derecha */
+/* DEPOSICIONES — bajado 20px, movido 40px a la derecha */
 #deposiciones {
-    top: 390px;
-    left: 628px;
+    top: 410px;
+    left: 668px;
     width: 60px;
     height: 155px;
     resize: none;
 }
 
-/* CONTROLES ENFERMERÍA MAÑANA — bajado 15px, movido 20px a la derecha */
+/* CONTROLES ENFERMERÍA MAÑANA — bajado 20px, movido 40px a la derecha */
 .control-manana-fr {
     position: absolute;
-    top: 403px;
-    left: 703px;
+    top: 423px;
+    left: 743px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -173,8 +173,8 @@ textarea:focus {
 
 .control-manana-te {
     position: absolute;
-    top: 403px;
-    left: 726px;
+    top: 423px;
+    left: 766px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -183,8 +183,8 @@ textarea:focus {
 
 .control-manana-p {
     position: absolute;
-    top: 403px;
-    left: 749px;
+    top: 423px;
+    left: 789px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -193,19 +193,19 @@ textarea:focus {
 
 .control-manana-ta {
     position: absolute;
-    top: 403px;
-    left: 772px;
+    top: 423px;
+    left: 812px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES ENFERMERÍA TARDE — bajado 15px, movido 20px a la derecha */
+/* CONTROLES ENFERMERÍA TARDE — bajado 20px, movido 40px a la derecha */
 .control-tarde-fr {
     position: absolute;
-    top: 450px;
-    left: 703px;
+    top: 470px;
+    left: 743px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -214,8 +214,8 @@ textarea:focus {
 
 .control-tarde-te {
     position: absolute;
-    top: 450px;
-    left: 726px;
+    top: 470px;
+    left: 766px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -224,8 +224,8 @@ textarea:focus {
 
 .control-tarde-p {
     position: absolute;
-    top: 450px;
-    left: 749px;
+    top: 470px;
+    left: 789px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -234,19 +234,19 @@ textarea:focus {
 
 .control-tarde-ta {
     position: absolute;
-    top: 450px;
-    left: 772px;
+    top: 470px;
+    left: 812px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES ENFERMERÍA NOCHE — bajado 15px, movido 20px a la derecha */
+/* CONTROLES ENFERMERÍA NOCHE — bajado 20px, movido 40px a la derecha */
 .control-noche-fr {
     position: absolute;
-    top: 498px;
-    left: 703px;
+    top: 518px;
+    left: 743px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -255,8 +255,8 @@ textarea:focus {
 
 .control-noche-te {
     position: absolute;
-    top: 498px;
-    left: 726px;
+    top: 518px;
+    left: 766px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -265,8 +265,8 @@ textarea:focus {
 
 .control-noche-p {
     position: absolute;
-    top: 498px;
-    left: 749px;
+    top: 518px;
+    left: 789px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -275,19 +275,19 @@ textarea:focus {
 
 .control-noche-ta {
     position: absolute;
-    top: 498px;
-    left: 772px;
+    top: 518px;
+    left: 812px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* OBSERVACIONES — bajado 40px, ancho achicado 60px */
+/* OBSERVACIONES — bajado 40px, 120px más angosto, movido 100px a la derecha */
 #observaciones_enfermeria {
-    top: 575px;
-    left: 8px;
-    width: 905px;
+    top: 615px;
+    left: 108px;
+    width: 785px;
     height: 36px;
     resize: none;
     font-size: 9pt;
@@ -295,15 +295,17 @@ textarea:focus {
     padding: 2px;
 }
 
+/* BOTÓN — verde, subido 70px */
 .actions {
-    margin-top: 10mm;
+    margin-top: -32px;
     text-align: center;
 }
 
 .btn-submit {
     padding: 4mm 12mm;
-    background: white;
-    border: 2pt solid #000;
+    background: #22c55e;
+    color: white;
+    border: 2pt solid #16a34a;
     font-size: 11pt;
     font-weight: bold;
     cursor: pointer;
@@ -313,7 +315,7 @@ textarea:focus {
 }
 
 .btn-submit:hover {
-    background: #000;
+    background: #16a34a;
     color: white;
 }
 
