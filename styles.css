@@ -12,7 +12,7 @@
 body {
     font-family: Arial, sans-serif;
     background: #e5e5e5;
-    padding: 20px;
+    padding: 20mm;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -29,27 +29,27 @@ body {
 .form-container {
     width: 260mm;
     height: 197mm;
-    border: 2px solid #000;
+    border: 1pt solid #000;
     margin: 0 auto;
     position: relative;
     background: white;
 }
 
-/* FILA 1 */
+/* FILA 1: Fecha, Hab, Mutual, Dr, Pte - Altura aprox 5mm */
 .row1 {
     display: grid;
-    grid-template-columns: 70px 50px 140px 90px 1fr;
-    border-bottom: 1px solid #000;
-    height: 18px;
+    grid-template-columns: 25mm 15mm 45mm 30mm 1fr;
+    border-bottom: 1pt solid #000;
+    height: 5mm;
 }
 
 .cell {
-    border-right: 1px solid #000;
-    padding: 2px 5px;
+    border-right: 1pt solid #000;
+    padding: 0.5mm 1.5mm;
     display: flex;
     align-items: center;
-    gap: 4px;
-    font-size: 8px;
+    gap: 1mm;
+    font-size: 11pt;
 }
 
 .cell:last-child {
@@ -65,23 +65,23 @@ body {
 .cell input[type="text"] {
     border: none;
     flex: 1;
-    font-size: 8px;
+    font-size: 11pt;
     padding: 0;
     background: transparent;
 }
 
-/* FILA 2 */
+/* FILA 2: Trámite, Indicaciones, Diagnóstico - Altura aprox 6mm */
 .row2 {
     display: grid;
-    grid-template-columns: 200px 1fr 180px;
-    border-bottom: 2px solid #000;
-    height: 20px;
-    font-size: 8px;
+    grid-template-columns: 70mm 76mm 114mm;
+    border-bottom: 1pt solid #000;
+    height: 6mm;
+    font-size: 11pt;
 }
 
 .row2>div {
-    border-right: 1px solid #000;
-    padding: 3px 6px;
+    border-right: 1pt solid #000;
+    padding: 1mm 2mm;
     display: flex;
     align-items: center;
     text-transform: uppercase;
@@ -98,14 +98,14 @@ body {
 
 .checkbox-group {
     display: flex;
-    gap: 12px;
+    gap: 3mm;
     align-items: center;
 }
 
 .checkbox-group label {
     display: flex;
     align-items: center;
-    gap: 3px;
+    gap: 1mm;
     font-weight: normal;
 }
 
@@ -113,84 +113,91 @@ body {
     justify-content: center;
 }
 
-/* LÍNEAS PUNTEADAS */
+/* ÁREA DE DIAGNÓSTICO: Y: 0-104mm, X: 114-260mm */
+/* Las líneas punteadas van desde Y: 11mm hasta Y: 98mm aprox */
+/* Altura disponible: 98-11 = 87mm ÷ 5mm = 17 líneas aprox */
+
 .lines-section {
-    padding: 5px 10px;
-    border-bottom: 1px solid #000;
+    padding: 1mm 3mm;
+    border-bottom: 1pt solid #000;
+    height: 98mm;
 }
 
 .dotted-line {
-    border-bottom: 1px dotted #333;
-    height: 13px;
+    border-bottom: 1pt dotted #333;
+    height: 5mm;
     margin: 0;
 }
 
-/* DIETA */
+/* DIETA - Altura aprox 6mm */
 .dieta-section {
-    border-bottom: 1px solid #000;
-    padding: 4px 10px;
+    border-bottom: 1pt solid #000;
+    padding: 1mm 3mm;
+    height: 6mm;
 }
 
 .dieta-section label {
-    font-size: 9px;
+    font-size: 11pt;
     font-weight: bold;
-    margin-bottom: 2px;
+    margin-bottom: 0.5mm;
     display: block;
 }
 
 .dieta-section input {
     border: none;
-    border-bottom: 1px dotted #333;
+    border-bottom: 1pt dotted #333;
     width: 100%;
-    font-size: 8px;
-    padding: 1px 0;
+    font-size: 11pt;
+    padding: 0;
     background: transparent;
 }
 
-/* TABLA PRINCIPAL */
+/* TABLA PRINCIPAL: Y: 105-178mm = 73mm altura */
 .main-table {
     display: grid;
-    grid-template-columns: 100px 1fr;
-    height: 125mm;
+    grid-template-columns: 114mm 146mm;
+    height: 73mm;
 }
 
+/* HIDRATACIÓN: X: 0-114mm, Y: 105-178mm */
 .hidratacion-col {
-    border-right: 1px solid #000;
-    padding: 8px 6px;
+    border-right: 1pt solid #000;
+    padding: 2mm;
 }
 
 .hidratacion-col label {
-    font-size: 9px;
+    font-size: 11pt;
     font-weight: normal;
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 1mm;
 }
 
 .hidratacion-col input {
     width: 100%;
     border: none;
-    border-bottom: 1px dotted #333;
-    font-size: 8px;
-    padding: 1px 0;
+    border-bottom: 1pt dotted #333;
+    font-size: 11pt;
+    padding: 0;
     background: transparent;
 }
 
+/* ÁREA DIURESIS: X: 114-260mm (146mm), dividido en 4 columnas + controles */
 .right-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 28px 1fr;
+    grid-template-rows: 8mm 1fr;
 }
 
 .col-header {
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000;
+    border-right: 1pt solid #000;
+    border-bottom: 1pt solid #000;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 8px;
+    font-size: 11pt;
     font-weight: normal;
-    padding: 4px 2px;
+    padding: 1mm;
     line-height: 1.1;
 }
 
@@ -199,8 +206,8 @@ body {
 }
 
 .col-body {
-    border-right: 1px solid #000;
-    padding: 8px 5px;
+    border-right: 1pt solid #000;
+    padding: 2mm 1.5mm;
 }
 
 .col-body:last-child {
@@ -210,59 +217,59 @@ body {
 .diuresis-col {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 2mm;
 }
 
 .diuresis-item {
-    font-size: 7px;
+    font-size: 11pt;
 }
 
 .diuresis-item span {
     display: block;
-    margin-bottom: 2px;
+    margin-bottom: 0.5mm;
 }
 
 .diuresis-item input {
     width: 100%;
     border: none;
-    border-bottom: 1px dotted #333;
-    font-size: 7px;
-    padding: 1px 0;
+    border-bottom: 1pt dotted #333;
+    font-size: 11pt;
+    padding: 0;
     background: transparent;
 }
 
 .simple-col {
-    padding-top: 4px;
+    padding-top: 1mm;
 }
 
 .simple-col input {
     width: 100%;
     border: none;
-    border-bottom: 1px dotted #333;
-    font-size: 7px;
-    padding: 1px 0;
+    border-bottom: 1pt dotted #333;
+    font-size: 11pt;
+    padding: 0;
     background: transparent;
 }
 
 /* CONTROLES DE ENFERMERÍA */
 .controles-col {
     grid-column: span 4;
-    border-top: 1px solid #000;
-    padding: 6px;
+    border-top: 1pt solid #000;
+    padding: 2mm;
 }
 
 .controles-title {
-    font-size: 8px;
+    font-size: 11pt;
     text-align: center;
-    margin-bottom: 6px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid #000;
+    margin-bottom: 2mm;
+    padding-bottom: 1mm;
+    border-bottom: 1pt solid #000;
 }
 
 .controles-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 3mm;
 }
 
 .turno-block {
@@ -270,65 +277,65 @@ body {
 }
 
 .turno-name {
-    font-size: 7px;
+    font-size: 11pt;
     font-weight: bold;
-    margin-bottom: 3px;
+    margin-bottom: 1mm;
 }
 
 .turno-labels {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
-    font-size: 6px;
-    margin-bottom: 3px;
+    gap: 0.5mm;
+    font-size: 11pt;
+    margin-bottom: 1mm;
 }
 
 .turno-inputs {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
+    gap: 0.5mm;
 }
 
 .turno-inputs input {
     width: 100%;
     border: none;
-    border-bottom: 1px dotted #333;
-    font-size: 7px;
+    border-bottom: 1pt dotted #333;
+    font-size: 11pt;
     text-align: center;
-    padding: 1px 0;
+    padding: 0;
     background: transparent;
 }
 
-/* OBSERVACIONES */
+/* OBSERVACIONES: Y: 178-197mm = 19mm altura */
 .observaciones {
-    border-top: 1px solid #000;
-    padding: 5px 10px;
-    height: 48px;
+    border-top: 1pt solid #000;
+    padding: 1.5mm 3mm;
+    height: 19mm;
 }
 
 .observaciones label {
-    font-size: 8px;
+    font-size: 11pt;
     display: block;
-    margin-bottom: 2px;
+    margin-bottom: 0.5mm;
 }
 
 .observaciones textarea {
     width: 100%;
-    height: calc(100% - 18px);
+    height: calc(100% - 5mm);
     border: none;
     font-family: Arial, sans-serif;
-    font-size: 8px;
+    font-size: 11pt;
     resize: none;
     background: transparent;
     line-height: 1.3;
 }
 
-/* FORMULARIO Nº 5 */
+/* FORMULARIO Nº 5 - Fuera del recuadro, abajo izquierda */
 .form-number {
     position: absolute;
-    bottom: 52px;
-    left: 10px;
-    font-size: 8px;
+    bottom: -6mm;
+    left: 0;
+    font-size: 11pt;
 }
 
 input:focus,
@@ -338,19 +345,19 @@ textarea:focus {
 
 /* BOTÓN Y MENSAJE */
 .actions {
-    margin-top: 20px;
+    margin-top: 10mm;
     text-align: center;
 }
 
 .btn-submit {
-    padding: 12px 40px;
+    padding: 4mm 12mm;
     background: white;
-    border: 2px solid #000;
-    font-size: 11px;
+    border: 1pt solid #000;
+    font-size: 11pt;
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.5mm;
     transition: all 0.3s;
 }
 
@@ -365,11 +372,11 @@ textarea:focus {
 }
 
 .message {
-    margin-top: 15px;
-    padding: 12px;
-    border: 2px solid #000;
+    margin-top: 5mm;
+    padding: 4mm;
+    border: 1pt solid #000;
     text-align: center;
-    font-size: 10px;
+    font-size: 11pt;
     display: none;
 }
 
@@ -397,9 +404,13 @@ textarea:focus {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding: 5mm;
+    }
+
     .page {
         width: 100%;
-        padding: 10px;
+        padding: 5mm;
     }
 
     .form-container {
