@@ -59,39 +59,39 @@ textarea:focus {
 
 /* FILA SUPERIOR */
 #fecha {
-    top: 10px;
+    top: 68px;
     left: 11px;
     width: 95px;
 }
 
 #hab {
-    top: 10px;
+    top: 68px;
     left: 175px;
     width: 45px;
 }
 
 #mutual {
-    top: 10px;
+    top: 68px;
     left: 230px;
     width: 125px;
 }
 
 #dr {
-    top: 10px;
+    top: 68px;
     left: 365px;
     width: 140px;
 }
 
 #pte {
-    top: 10px;
-    left: 515px;
-    width: 190px;
+    top: 68px;
+    left: 520px;
+    width: 200px;
 }
 
 /* TRÁMITE ADM */
 .campo-tramite {
     position: absolute;
-    top: 22px;
+    top: 85px;
     left: 110px;
     display: flex;
     gap: 8px;
@@ -118,26 +118,26 @@ textarea:focus {
 #diuresis_manana {
     top: 448px;
     left: 640px;
-    width: 68px;
+    width: 60px;
 }
 
 #diuresis_tarde {
     top: 500px;
     left: 640px;
-    width: 68px;
+    width: 60px;
 }
 
 #diuresis_noche {
     top: 553px;
     left: 640px;
-    width: 68px;
+    width: 60px;
 }
 
 /* DRENAJES */
 #drenajes {
     top: 430px;
-    left: 715px;
-    width: 70px;
+    left: 708px;
+    width: 60px;
     height: 165px;
     resize: none;
 }
@@ -145,8 +145,8 @@ textarea:focus {
 /* SNG VOMITOS */
 #sng_vomitos {
     top: 430px;
-    left: 790px;
-    width: 68px;
+    left: 773px;
+    width: 60px;
     height: 165px;
     resize: none;
 }
@@ -154,8 +154,8 @@ textarea:focus {
 /* DEPOSICIONES */
 #deposiciones {
     top: 430px;
-    left: 863px;
-    width: 68px;
+    left: 838px;
+    width: 60px;
     height: 165px;
     resize: none;
 }
@@ -164,8 +164,8 @@ textarea:focus {
 .control-manana-fr {
     position: absolute;
     top: 455px;
-    left: 937px;
-    width: 24px;
+    left: 883px;
+    width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
@@ -174,7 +174,7 @@ textarea:focus {
 .control-manana-te {
     position: absolute;
     top: 455px;
-    left: 952px;
+    left: 906px;
     width: 18px;
     text-align: center;
     font-size: 9pt;
@@ -184,8 +184,8 @@ textarea:focus {
 .control-manana-p {
     position: absolute;
     top: 455px;
-    left: 964px;
-    width: 16px;
+    left: 925px;
+    width: 18px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
@@ -194,7 +194,7 @@ textarea:focus {
 .control-manana-ta {
     position: absolute;
     top: 455px;
-    left: 975px;
+    left: 944px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -205,8 +205,8 @@ textarea:focus {
 .control-tarde-fr {
     position: absolute;
     top: 505px;
-    left: 937px;
-    width: 24px;
+    left: 883px;
+    width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
@@ -215,7 +215,7 @@ textarea:focus {
 .control-tarde-te {
     position: absolute;
     top: 505px;
-    left: 952px;
+    left: 906px;
     width: 18px;
     text-align: center;
     font-size: 9pt;
@@ -225,8 +225,8 @@ textarea:focus {
 .control-tarde-p {
     position: absolute;
     top: 505px;
-    left: 964px;
-    width: 16px;
+    left: 925px;
+    width: 18px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
@@ -235,7 +235,7 @@ textarea:focus {
 .control-tarde-ta {
     position: absolute;
     top: 505px;
-    left: 975px;
+    left: 944px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -246,8 +246,8 @@ textarea:focus {
 .control-noche-fr {
     position: absolute;
     top: 558px;
-    left: 937px;
-    width: 24px;
+    left: 883px;
+    width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
@@ -256,7 +256,7 @@ textarea:focus {
 .control-noche-te {
     position: absolute;
     top: 558px;
-    left: 952px;
+    left: 906px;
     width: 18px;
     text-align: center;
     font-size: 9pt;
@@ -266,8 +266,8 @@ textarea:focus {
 .control-noche-p {
     position: absolute;
     top: 558px;
-    left: 964px;
-    width: 16px;
+    left: 925px;
+    width: 18px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
@@ -276,7 +276,7 @@ textarea:focus {
 .control-noche-ta {
     position: absolute;
     top: 558px;
-    left: 975px;
+    left: 944px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -295,7 +295,6 @@ textarea:focus {
     padding: 2px;
 }
 
-/* BOTÓN Y MENSAJES */
 .actions {
     margin-top: 10mm;
     text-align: center;
