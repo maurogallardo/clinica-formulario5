@@ -13,167 +13,173 @@
         <form id="formulario5">
             <div class="form-container">
 
-                <!-- FILA 1: Encabezado -->
-                <div class="row1">
-                    <div class="cell">
-                        <label>Fecha</label>
-                        <input type="date" id="fecha" required>
-                    </div>
-                    <div class="cell">
-                        <label>Hab.:</label>
-                        <input type="text" id="hab">
-                    </div>
-                    <div class="cell">
-                        <label>Mutual:</label>
-                        <input type="text" id="mutual">
-                    </div>
-                    <div class="cell">
-                        <label>Dr.:</label>
-                        <input type="text" id="dr">
-                    </div>
-                    <div class="cell">
-                        <label>Pte.:</label>
-                        <input type="text" id="pte">
-                    </div>
+                <!-- LÍNEAS HORIZONTALES -->
+                <div class="linea-h linea-h-1"></div>
+                <div class="linea-h linea-h-2"></div>
+                <div class="linea-h linea-h-3"></div>
+                <div class="linea-h linea-h-4"></div>
+                <div class="linea-h linea-h-5"></div>
+
+                <!-- LÍNEAS VERTICALES -->
+                <div class="linea-v linea-v-fecha"></div>
+                <div class="linea-v linea-v-hab"></div>
+                <div class="linea-v linea-v-mutual"></div>
+                <div class="linea-v linea-v-dr"></div>
+                <div class="linea-v linea-v-tramite"></div>
+                <div class="linea-v linea-v-indicaciones"></div>
+                <div class="linea-v linea-v-hidratacion"></div>
+                <div class="linea-v linea-v-diuresis"></div>
+                <div class="linea-v linea-v-drenajes"></div>
+                <div class="linea-v linea-v-sng"></div>
+
+                <!-- FILA 1 -->
+                <div class="campo campo-fecha">
+                    <label>Fecha</label>
+                    <input type="date" id="fecha" required>
+                </div>
+                <div class="campo campo-hab">
+                    <label>Hab.:</label>
+                    <input type="text" id="hab">
+                </div>
+                <div class="campo campo-mutual">
+                    <label>Mutual:</label>
+                    <input type="text" id="mutual">
+                </div>
+                <div class="campo campo-dr">
+                    <label>Dr.:</label>
+                    <input type="text" id="dr">
+                </div>
+                <div class="campo campo-pte">
+                    <label>Pte.:</label>
+                    <input type="text" id="pte">
                 </div>
 
-                <!-- FILA 2: Trámite, Indicaciones, Diagnóstico -->
-                <div class="row2">
-                    <div class="tramite-adm">
-                        <span>TRÁMITE ADM.:</span>
-                        <div class="checkbox-group">
-                            <label><input type="checkbox" name="tramite" value="SI"> SI</label>
-                            <label><input type="checkbox" name="tramite" value="NO"> NO</label>
-                        </div>
+                <!-- FILA 2 -->
+                <div class="campo campo-tramite">
+                    <span>TRÁMITE ADM.:</span>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="tramite" value="SI"> SI</label>
+                        <label><input type="checkbox" name="tramite" value="NO"> NO</label>
                     </div>
-                    <div class="centered">INDICACIONES MÉDICAS</div>
-                    <div class="centered">DIAGNÓSTICO:</div>
                 </div>
+                <div class="campo campo-indicaciones">INDICACIONES MÉDICAS</div>
+                <div class="campo campo-diagnostico">DIAGNÓSTICO:</div>
 
                 <!-- LÍNEAS PUNTEADAS -->
-                <div class="lines-section">
-                    <div class="dotted-line"></div>
-                    <div class="dotted-line"></div>
-                    <div class="dotted-line"></div>
-                    <div class="dotted-line"></div>
-                    <div class="dotted-line"></div>
-                    <div class="dotted-line"></div>
-                    <div class="dotted-line"></div>
-                    <div class="dotted-line"></div>
-                    <div class="dotted-line"></div>
-                    <div class="dotted-line"></div>
-                    <div class="dotted-line"></div>
-                    <div class="dotted-line"></div>
-                    <div class="dotted-line"></div>
-                </div>
+                <div class="linea-punteada linea-punteada-1"></div>
+                <div class="linea-punteada linea-punteada-2"></div>
+                <div class="linea-punteada linea-punteada-3"></div>
+                <div class="linea-punteada linea-punteada-4"></div>
+                <div class="linea-punteada linea-punteada-5"></div>
+                <div class="linea-punteada linea-punteada-6"></div>
+                <div class="linea-punteada linea-punteada-7"></div>
+                <div class="linea-punteada linea-punteada-8"></div>
+                <div class="linea-punteada linea-punteada-9"></div>
+                <div class="linea-punteada linea-punteada-10"></div>
+                <div class="linea-punteada linea-punteada-11"></div>
+                <div class="linea-punteada linea-punteada-12"></div>
+                <div class="linea-punteada linea-punteada-13"></div>
 
                 <!-- DIETA -->
-                <div class="dieta-section">
+                <div class="campo campo-dieta">
                     <label>DIETA:</label>
                     <input type="text" id="dieta">
                 </div>
 
-                <!-- TABLA PRINCIPAL -->
-                <div class="main-table">
-                    <div class="hidratacion-col">
-                        <label>Hidratación:</label>
-                        <input type="text" id="hidratacion">
-                    </div>
+                <!-- HIDRATACIÓN -->
+                <div class="campo campo-hidratacion">
+                    <label>Hidratación:</label>
+                    <input type="text" id="hidratacion">
+                </div>
 
-                    <div class="right-grid">
-                        <!-- HEADERS -->
-                        <div class="col-header">Diuresis</div>
-                        <div class="col-header">Drenajes</div>
-                        <div class="col-header">S N G<br>Vómitos</div>
-                        <div class="col-header">Deposiciones</div>
+                <!-- HEADERS -->
+                <div class="col-header header-diuresis">Diuresis</div>
+                <div class="col-header header-drenajes">Drenajes</div>
+                <div class="col-header header-sng">S N G<br>Vómitos</div>
+                <div class="col-header header-deposiciones">Deposiciones</div>
 
-                        <!-- BODIES -->
-                        <div class="col-body diuresis-col">
-                            <div class="diuresis-item">
-                                <span>05 a 13=</span>
-                                <input type="text" id="diuresis_manana">
+                <!-- DIURESIS -->
+                <div class="campo-diuresis diuresis-1">
+                    <span>05 a 13=</span>
+                    <input type="text" id="diuresis_manana">
+                </div>
+                <div class="campo-diuresis diuresis-2">
+                    <span>13 a 21=</span>
+                    <input type="text" id="diuresis_tarde">
+                </div>
+                <div class="campo-diuresis diuresis-3">
+                    <span>21 a 5=</span>
+                    <input type="text" id="diuresis_noche">
+                </div>
+
+                <!-- OTROS CAMPOS -->
+                <div class="campo-simple campo-drenajes">
+                    <input type="text" id="drenajes">
+                </div>
+                <div class="campo-simple campo-sng">
+                    <input type="text" id="sng_vomitos">
+                </div>
+                <div class="campo-simple campo-deposiciones">
+                    <input type="text" id="deposiciones">
+                </div>
+
+                <!-- CONTROLES DE ENFERMERÍA -->
+                <div class="controles-area">
+                    <div class="controles-title">Controles de Enfermería</div>
+                    <div class="controles-grid">
+                        <div class="turno-block">
+                            <div class="turno-name">MAÑANA</div>
+                            <div class="turno-labels">
+                                <div>F.R.</div>
+                                <div>Te.</div>
+                                <div>P.</div>
+                                <div>T.A.</div>
                             </div>
-                            <div class="diuresis-item">
-                                <span>13 a 21=</span>
-                                <input type="text" id="diuresis_tarde">
-                            </div>
-                            <div class="diuresis-item">
-                                <span>21 a 5=</span>
-                                <input type="text" id="diuresis_noche">
+                            <div class="turno-inputs">
+                                <input type="text">
+                                <input type="text">
+                                <input type="text">
+                                <input type="text">
                             </div>
                         </div>
-
-                        <div class="col-body simple-col">
-                            <input type="text" id="drenajes">
+                        <div class="turno-block">
+                            <div class="turno-name">TARDE</div>
+                            <div class="turno-labels">
+                                <div>F.R.</div>
+                                <div>Te.</div>
+                                <div>P.</div>
+                                <div>T.A.</div>
+                            </div>
+                            <div class="turno-inputs">
+                                <input type="text">
+                                <input type="text">
+                                <input type="text">
+                                <input type="text">
+                            </div>
                         </div>
-
-                        <div class="col-body simple-col">
-                            <input type="text" id="sng_vomitos">
-                        </div>
-
-                        <div class="col-body simple-col">
-                            <input type="text" id="deposiciones">
-                        </div>
-
-                        <!-- CONTROLES DE ENFERMERÍA -->
-                        <div class="col-body controles-col">
-                            <div class="controles-title">Controles de Enfermería</div>
-                            <div class="controles-grid">
-                                <div class="turno-block">
-                                    <div class="turno-name">MAÑANA</div>
-                                    <div class="turno-labels">
-                                        <div>F.R.</div>
-                                        <div>Te.</div>
-                                        <div>P.</div>
-                                        <div>T.A.</div>
-                                    </div>
-                                    <div class="turno-inputs">
-                                        <input type="text">
-                                        <input type="text">
-                                        <input type="text">
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="turno-block">
-                                    <div class="turno-name">TARDE</div>
-                                    <div class="turno-labels">
-                                        <div>F.R.</div>
-                                        <div>Te.</div>
-                                        <div>P.</div>
-                                        <div>T.A.</div>
-                                    </div>
-                                    <div class="turno-inputs">
-                                        <input type="text">
-                                        <input type="text">
-                                        <input type="text">
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="turno-block">
-                                    <div class="turno-name">NOCHE</div>
-                                    <div class="turno-labels">
-                                        <div>F.R.</div>
-                                        <div>Te.</div>
-                                        <div>P.</div>
-                                        <div>T.A.</div>
-                                    </div>
-                                    <div class="turno-inputs">
-                                        <input type="text">
-                                        <input type="text">
-                                        <input type="text">
-                                        <input type="text">
-                                    </div>
-                                </div>
+                        <div class="turno-block">
+                            <div class="turno-name">NOCHE</div>
+                            <div class="turno-labels">
+                                <div>F.R.</div>
+                                <div>Te.</div>
+                                <div>P.</div>
+                                <div>T.A.</div>
+                            </div>
+                            <div class="turno-inputs">
+                                <input type="text">
+                                <input type="text">
+                                <input type="text">
+                                <input type="text">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- OBSERVACIONES CON 2 LÍNEAS -->
-                <div class="observaciones">
+                <!-- OBSERVACIONES -->
+                <div class="observaciones-area">
                     <label>Observaciones de Enfermería:</label>
-                    <div class="observaciones-line1"></div>
-                    <div class="observaciones-line2"></div>
+                    <div class="obs-line"></div>
+                    <div class="obs-line"></div>
                     <textarea id="observaciones_enfermeria" style="display:none;"></textarea>
                 </div>
 
