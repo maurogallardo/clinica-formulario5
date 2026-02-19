@@ -62,7 +62,6 @@ textarea {
     overflow-y: auto;
     vertical-align: top;
     padding: 2px;
-    text-align: left;
     display: block;
 }
 
@@ -76,9 +75,10 @@ textarea:focus {
     position: absolute;
 }
 
+/* FILA SUPERIOR */
 #fecha {
     top: 31px;
-    left: 81px;
+    left: 71px;
     width: 95px;
 }
 
@@ -169,11 +169,11 @@ textarea:focus {
     height: 155px;
 }
 
-/* CONTROLES MAÑANA — 140px izquierda, separados 35px entre sí */
+/* CONTROLES MAÑANA — 40px derecha, 20px entre cuadros */
 .control-manana-fr {
     position: absolute;
     top: 448px;
-    left: 738px;
+    left: 778px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -183,7 +183,7 @@ textarea:focus {
 .control-manana-te {
     position: absolute;
     top: 448px;
-    left: 773px;
+    left: 800px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -193,7 +193,7 @@ textarea:focus {
 .control-manana-p {
     position: absolute;
     top: 448px;
-    left: 808px;
+    left: 822px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -203,7 +203,7 @@ textarea:focus {
 .control-manana-ta {
     position: absolute;
     top: 448px;
-    left: 843px;
+    left: 844px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -214,7 +214,7 @@ textarea:focus {
 .control-tarde-fr {
     position: absolute;
     top: 507px;
-    left: 738px;
+    left: 778px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -224,7 +224,7 @@ textarea:focus {
 .control-tarde-te {
     position: absolute;
     top: 507px;
-    left: 773px;
+    left: 800px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -234,7 +234,7 @@ textarea:focus {
 .control-tarde-p {
     position: absolute;
     top: 507px;
-    left: 808px;
+    left: 822px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -244,7 +244,7 @@ textarea:focus {
 .control-tarde-ta {
     position: absolute;
     top: 507px;
-    left: 843px;
+    left: 844px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -255,7 +255,7 @@ textarea:focus {
 .control-noche-fr {
     position: absolute;
     top: 570px;
-    left: 738px;
+    left: 778px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -265,7 +265,7 @@ textarea:focus {
 .control-noche-te {
     position: absolute;
     top: 570px;
-    left: 773px;
+    left: 800px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -275,7 +275,7 @@ textarea:focus {
 .control-noche-p {
     position: absolute;
     top: 570px;
-    left: 808px;
+    left: 822px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -285,7 +285,7 @@ textarea:focus {
 .control-noche-ta {
     position: absolute;
     top: 570px;
-    left: 843px;
+    left: 844px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -293,7 +293,7 @@ textarea:focus {
 }
 
 #observaciones_enfermeria {
-    top: 625px;
+    top: 620px;
     left: 218px;
     width: 635px;
     height: 50px;
