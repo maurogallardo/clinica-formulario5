@@ -119,40 +119,45 @@ textarea:focus {
     gap: 16px;
 }
 
-/* INDICACIONES MÉDICAS — width 345px, height 32px, sep 40px, -8px arriba */
+/* INDICACIONES MÉDICAS */
 #csv {
-    top: 105px;
-    left: 55px;
+    top: 101px;
+    left: 47px;
     width: 345px;
     height: 32px;
+    padding-left: 50px;
 }
 
 #tomografia {
-    top: 145px;
-    left: 55px;
+    top: 149px;
+    left: 47px;
     width: 345px;
     height: 32px;
+    padding-left: 95px;
 }
 
 #electrocardiograma {
-    top: 185px;
-    left: 55px;
+    top: 195px;
+    left: 47px;
     width: 345px;
     height: 32px;
+    padding-left: 170px;
 }
 
 #laboratorio {
-    top: 225px;
-    left: 55px;
+    top: 245px;
+    left: 47px;
     width: 345px;
     height: 32px;
+    padding-left: 100px;
 }
 
 #medicacion {
-    top: 265px;
-    left: 55px;
+    top: 295px;
+    left: 47px;
     width: 345px;
     height: 32px;
+    padding-left: 90px;
 }
 
 #dieta {
@@ -366,6 +371,10 @@ textarea:focus {
 .actions {
     margin-top: 20px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 }
 
 .btn-submit {
@@ -383,12 +392,53 @@ textarea:focus {
 
 .btn-submit:hover {
     background: #16a34a;
-    color: white;
 }
 
 .btn-submit:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+.btn-mic {
+    padding: 4mm 6mm;
+    background: #3b82f6;
+    color: white;
+    border: 2pt solid #1d4ed8;
+    font-size: 16pt;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.btn-mic:hover {
+    background: #1d4ed8;
+}
+
+.btn-mic.grabando {
+    background: #ef4444;
+    border-color: #b91c1c;
+    animation: pulso 1s infinite;
+}
+
+@keyframes pulso {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.mic-status {
+    font-size: 9pt;
+    color: #555;
+    min-width: 150px;
+    text-align: left;
 }
 
 .message {
