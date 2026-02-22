@@ -174,11 +174,11 @@ textarea:focus {
     height: 155px;
 }
 
-/* CONTROLES MAÑANA */
+/* CONTROLES MAÑANA — FR -15px izquierda */
 .control-manana-fr {
     position: absolute;
     top: 533px;
-    left: 698px;
+    left: 683px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -225,11 +225,11 @@ textarea:focus {
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES TARDE */
+/* CONTROLES TARDE — FR -15px izquierda */
 .control-tarde-fr {
     position: absolute;
     top: 614px;
-    left: 698px;
+    left: 683px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -276,11 +276,11 @@ textarea:focus {
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES NOCHE */
+/* CONTROLES NOCHE — FR -15px izquierda */
 .control-noche-fr {
     position: absolute;
     top: 697px;
-    left: 698px;
+    left: 683px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
