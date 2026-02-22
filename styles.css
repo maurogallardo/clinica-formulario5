@@ -76,32 +76,32 @@ textarea:focus {
 }
 
 #fecha {
-    top: 27px;
-    left: 64px;
+    top: 25px;
+    left: 62px;
     width: 95px;
 }
 
 #hab {
-    top: 27px;
-    left: 185px;
+    top: 25px;
+    left: 179px;
     width: 45px;
 }
 
 #mutual {
-    top: 27px;
-    left: 272px;
+    top: 25px;
+    left: 262px;
     width: 125px;
 }
 
 #dr {
-    top: 27px;
-    left: 433px;
+    top: 25px;
+    left: 408px;
     width: 140px;
 }
 
 #pte {
-    top: 27px;
-    left: 675px;
+    top: 25px;
+    left: 645px;
     width: 185px;
 }
 
@@ -114,64 +114,64 @@ textarea:focus {
 }
 
 #dieta {
-    top: 471px;
+    top: 441px;
     left: 65px;
-    width: 740px;
+    width: 710px;
     height: 22px;
     overflow-y: hidden;
 }
 
 #hidratacion {
-    top: 433px;
-    left: 110px;
+    top: 483px;
+    left: 85px;
     width: 270px;
     height: 185px;
     padding: 2px;
 }
 
 #diuresis_manana {
-    top: 503px;
-    left: 408px;
+    top: 513px;
+    left: 388px;
     width: 60px;
 }
 
 #diuresis_tarde {
-    top: 570px;
-    left: 408px;
+    top: 580px;
+    left: 388px;
     width: 60px;
 }
 
 #diuresis_noche {
-    top: 633px;
-    left: 408px;
+    top: 643px;
+    left: 388px;
     width: 60px;
 }
 
 #drenajes {
     top: 480px;
-    left: 499px;
+    left: 469px;
     width: 60px;
     height: 155px;
 }
 
 #sng_vomitos {
     top: 480px;
-    left: 597px;
+    left: 567px;
     width: 60px;
     height: 155px;
 }
 
 #deposiciones {
     top: 480px;
-    left: 693px;
+    left: 663px;
     width: 60px;
     height: 155px;
 }
 
 .control-manana-fr {
     position: absolute;
-    top: 503px;
-    left: 788px;
+    top: 533px;
+    left: 748px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -180,8 +180,8 @@ textarea:focus {
 
 .control-manana-te {
     position: absolute;
-    top: 503px;
-    left: 819px;
+    top: 533px;
+    left: 779px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -190,8 +190,8 @@ textarea:focus {
 
 .control-manana-p {
     position: absolute;
-    top: 503px;
-    left: 850px;
+    top: 533px;
+    left: 810px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -200,8 +200,8 @@ textarea:focus {
 
 .control-manana-ta {
     position: absolute;
-    top: 503px;
-    left: 881px;
+    top: 533px;
+    left: 841px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -210,8 +210,8 @@ textarea:focus {
 
 .control-tarde-fr {
     position: absolute;
-    top: 562px;
-    left: 788px;
+    top: 592px;
+    left: 748px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -220,8 +220,8 @@ textarea:focus {
 
 .control-tarde-te {
     position: absolute;
-    top: 562px;
-    left: 819px;
+    top: 592px;
+    left: 779px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -230,8 +230,8 @@ textarea:focus {
 
 .control-tarde-p {
     position: absolute;
-    top: 562px;
-    left: 850px;
+    top: 592px;
+    left: 810px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -240,8 +240,8 @@ textarea:focus {
 
 .control-tarde-ta {
     position: absolute;
-    top: 562px;
-    left: 881px;
+    top: 592px;
+    left: 841px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -250,8 +250,8 @@ textarea:focus {
 
 .control-noche-fr {
     position: absolute;
-    top: 625px;
-    left: 788px;
+    top: 655px;
+    left: 748px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -260,8 +260,8 @@ textarea:focus {
 
 .control-noche-te {
     position: absolute;
-    top: 625px;
-    left: 819px;
+    top: 655px;
+    left: 779px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -270,8 +270,8 @@ textarea:focus {
 
 .control-noche-p {
     position: absolute;
-    top: 625px;
-    left: 850px;
+    top: 655px;
+    left: 810px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -280,8 +280,8 @@ textarea:focus {
 
 .control-noche-ta {
     position: absolute;
-    top: 625px;
-    left: 881px;
+    top: 655px;
+    left: 841px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
