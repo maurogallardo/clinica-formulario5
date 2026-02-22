@@ -1,4 +1,4 @@
-@page {
+FR pasa de 683 a 690. CSS completo: css@page {
     size: 340mm 220mm;
     margin: 0;
 }
@@ -174,11 +174,11 @@ textarea:focus {
     height: 155px;
 }
 
-/* CONTROLES MAÑANA — FR -15px izquierda */
+/* CONTROLES MAÑANA — FR 690 */
 .control-manana-fr {
     position: absolute;
     top: 533px;
-    left: 683px;
+    left: 690px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -225,11 +225,11 @@ textarea:focus {
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES TARDE — FR -15px izquierda */
+/* CONTROLES TARDE — FR 690 */
 .control-tarde-fr {
     position: absolute;
     top: 614px;
-    left: 683px;
+    left: 690px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -276,11 +276,11 @@ textarea:focus {
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES NOCHE — FR -15px izquierda */
+/* CONTROLES NOCHE — FR 690 */
 .control-noche-fr {
     position: absolute;
     top: 697px;
-    left: 683px;
+    left: 690px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
