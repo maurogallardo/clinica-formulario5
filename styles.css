@@ -119,35 +119,40 @@ textarea:focus {
     gap: 16px;
 }
 
-/* INDICACIONES MÉDICAS — 113px, separación 60px, width 495px */
+/* INDICACIONES MÉDICAS — width 345px, height 32px, sep 40px, -8px arriba */
 #csv {
-    top: 113px;
+    top: 105px;
     left: 55px;
-    width: 495px;
+    width: 345px;
+    height: 32px;
 }
 
 #tomografia {
-    top: 173px;
+    top: 145px;
     left: 55px;
-    width: 495px;
+    width: 345px;
+    height: 32px;
 }
 
 #electrocardiograma {
-    top: 233px;
+    top: 185px;
     left: 55px;
-    width: 495px;
+    width: 345px;
+    height: 32px;
 }
 
 #laboratorio {
-    top: 293px;
+    top: 225px;
     left: 55px;
-    width: 495px;
+    width: 345px;
+    height: 32px;
 }
 
 #medicacion {
-    top: 353px;
+    top: 265px;
     left: 55px;
-    width: 495px;
+    width: 345px;
+    height: 32px;
 }
 
 #dieta {
