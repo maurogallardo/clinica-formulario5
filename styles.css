@@ -174,7 +174,7 @@ textarea:focus {
     height: 155px;
 }
 
-/* CONTROLES MAÑANA — 25px separación */
+/* CONTROLES MAÑANA */
 .control-manana-fr {
     position: absolute;
     top: 533px;
@@ -215,7 +215,17 @@ textarea:focus {
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES TARDE — 25px separación */
+.control-manana-o2 {
+    position: absolute;
+    top: 533px;
+    left: 798px;
+    width: 22px;
+    text-align: center;
+    font-size: 9pt;
+    border: 1px solid #22c55e;
+}
+
+/* CONTROLES TARDE */
 .control-tarde-fr {
     position: absolute;
     top: 614px;
@@ -256,7 +266,17 @@ textarea:focus {
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES NOCHE — 25px separación */
+.control-tarde-o2 {
+    position: absolute;
+    top: 614px;
+    left: 798px;
+    width: 22px;
+    text-align: center;
+    font-size: 9pt;
+    border: 1px solid #22c55e;
+}
+
+/* CONTROLES NOCHE */
 .control-noche-fr {
     position: absolute;
     top: 697px;
@@ -291,6 +311,16 @@ textarea:focus {
     position: absolute;
     top: 697px;
     left: 773px;
+    width: 22px;
+    text-align: center;
+    font-size: 9pt;
+    border: 1px solid #22c55e;
+}
+
+.control-noche-o2 {
+    position: absolute;
+    top: 697px;
+    left: 798px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
