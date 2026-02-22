@@ -107,8 +107,8 @@ textarea:focus {
 
 #diagnostico {
     top: 43px;
-    left: 310px;
-    width: 650px;
+    left: 285px;
+    width: 610px;
 }
 
 .campo-tramite {
@@ -142,13 +142,13 @@ textarea:focus {
 }
 
 #diuresis_tarde {
-    top: 590px;
+    top: 593px;
     left: 388px;
     width: 60px;
 }
 
 #diuresis_noche {
-    top: 667px;
+    top: 669px;
     left: 388px;
     width: 60px;
 }
@@ -169,12 +169,11 @@ textarea:focus {
 
 #deposiciones {
     top: 480px;
-    left: 632px;
+    left: 629px;
     width: 60px;
     height: 155px;
 }
 
-/* CONTROLES MAÑANA */
 .control-manana-fr {
     position: absolute;
     top: 533px;
@@ -215,10 +214,9 @@ textarea:focus {
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES TARDE — +4px abajo */
 .control-tarde-fr {
     position: absolute;
-    top: 611px;
+    top: 614px;
     left: 748px;
     width: 22px;
     text-align: center;
@@ -228,7 +226,7 @@ textarea:focus {
 
 .control-tarde-te {
     position: absolute;
-    top: 611px;
+    top: 614px;
     left: 779px;
     width: 22px;
     text-align: center;
@@ -238,7 +236,7 @@ textarea:focus {
 
 .control-tarde-p {
     position: absolute;
-    top: 611px;
+    top: 614px;
     left: 810px;
     width: 22px;
     text-align: center;
@@ -248,7 +246,7 @@ textarea:focus {
 
 .control-tarde-ta {
     position: absolute;
-    top: 611px;
+    top: 614px;
     left: 841px;
     width: 22px;
     text-align: center;
@@ -256,10 +254,9 @@ textarea:focus {
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES NOCHE — +15px abajo */
 .control-noche-fr {
     position: absolute;
-    top: 690px;
+    top: 697px;
     left: 748px;
     width: 22px;
     text-align: center;
@@ -269,7 +266,7 @@ textarea:focus {
 
 .control-noche-te {
     position: absolute;
-    top: 690px;
+    top: 697px;
     left: 779px;
     width: 22px;
     text-align: center;
@@ -279,7 +276,7 @@ textarea:focus {
 
 .control-noche-p {
     position: absolute;
-    top: 690px;
+    top: 697px;
     left: 810px;
     width: 22px;
     text-align: center;
@@ -289,7 +286,7 @@ textarea:focus {
 
 .control-noche-ta {
     position: absolute;
-    top: 690px;
+    top: 697px;
     left: 841px;
     width: 22px;
     text-align: center;
