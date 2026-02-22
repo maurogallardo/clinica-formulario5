@@ -89,14 +89,14 @@ textarea:focus {
 
 #mutual {
     top: 25px;
-    left: 252px;
+    left: 256px;
     width: 125px;
 }
 
 #dr {
     top: 25px;
-    left: 398px;
-    width: 140px;
+    left: 399px;
+    width: 180px;
 }
 
 #pte {
@@ -105,11 +105,10 @@ textarea:focus {
     width: 185px;
 }
 
-/* DIAGNÓSTICO — misma fila que trámite ADM, desde ~350px hasta el final */
 #diagnostico {
     top: 43px;
-    left: 350px;
-    width: 610px;
+    left: 310px;
+    width: 650px;
 }
 
 .campo-tramite {
@@ -121,7 +120,7 @@ textarea:focus {
 }
 
 #dieta {
-    top: 426px;
+    top: 419px;
     left: 80px;
     width: 710px;
     height: 22px;
@@ -149,7 +148,7 @@ textarea:focus {
 }
 
 #diuresis_noche {
-    top: 663px;
+    top: 667px;
     left: 388px;
     width: 60px;
 }
@@ -163,14 +162,14 @@ textarea:focus {
 
 #sng_vomitos {
     top: 480px;
-    left: 552px;
+    left: 549px;
     width: 60px;
     height: 155px;
 }
 
 #deposiciones {
     top: 480px;
-    left: 638px;
+    left: 632px;
     width: 60px;
     height: 155px;
 }
@@ -216,10 +215,10 @@ textarea:focus {
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES TARDE — +15px abajo */
+/* CONTROLES TARDE — +4px abajo */
 .control-tarde-fr {
     position: absolute;
-    top: 607px;
+    top: 611px;
     left: 748px;
     width: 22px;
     text-align: center;
@@ -229,7 +228,7 @@ textarea:focus {
 
 .control-tarde-te {
     position: absolute;
-    top: 607px;
+    top: 611px;
     left: 779px;
     width: 22px;
     text-align: center;
@@ -239,7 +238,7 @@ textarea:focus {
 
 .control-tarde-p {
     position: absolute;
-    top: 607px;
+    top: 611px;
     left: 810px;
     width: 22px;
     text-align: center;
@@ -249,7 +248,7 @@ textarea:focus {
 
 .control-tarde-ta {
     position: absolute;
-    top: 607px;
+    top: 611px;
     left: 841px;
     width: 22px;
     text-align: center;
@@ -257,10 +256,10 @@ textarea:focus {
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES NOCHE — +20px abajo */
+/* CONTROLES NOCHE — +15px abajo */
 .control-noche-fr {
     position: absolute;
-    top: 675px;
+    top: 690px;
     left: 748px;
     width: 22px;
     text-align: center;
@@ -270,7 +269,7 @@ textarea:focus {
 
 .control-noche-te {
     position: absolute;
-    top: 675px;
+    top: 690px;
     left: 779px;
     width: 22px;
     text-align: center;
@@ -280,7 +279,7 @@ textarea:focus {
 
 .control-noche-p {
     position: absolute;
-    top: 675px;
+    top: 690px;
     left: 810px;
     width: 22px;
     text-align: center;
@@ -290,7 +289,7 @@ textarea:focus {
 
 .control-noche-ta {
     position: absolute;
-    top: 675px;
+    top: 690px;
     left: 841px;
     width: 22px;
     text-align: center;
@@ -299,7 +298,7 @@ textarea:focus {
 }
 
 .actions {
-    margin-top: -52px;
+    margin-top: 20px;
     text-align: center;
 }
 
