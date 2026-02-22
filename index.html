@@ -13,65 +13,52 @@
         <form id="formulario5">
             <div class="form-container">
 
-                <!-- FILA 1 -->
-                <input type="text" id="fecha" class="campo" placeholder="DD/MM/AAAA" required>
+                <input type="text" id="fecha" class="campo" placeholder="DD/MM/AAAA">
                 <input type="text" id="hab" class="campo">
                 <input type="text" id="mutual" class="campo">
                 <input type="text" id="dr" class="campo">
                 <input type="text" id="pte" class="campo">
 
-                <!-- TRÁMITE ADM -->
                 <div class="campo-tramite">
                     <label><input type="checkbox" name="tramite" value="SI"></label>
                     <label><input type="checkbox" name="tramite" value="NO"></label>
                 </div>
 
-                <!-- DIETA -->
-                <textarea id="dieta" class="campo"></textarea>
+                <input type="text" id="diagnostico" class="campo">
 
-                <!-- HIDRATACIÓN -->
+                <textarea id="dieta" class="campo"></textarea>
                 <textarea id="hidratacion" class="campo"></textarea>
-                <!-- DIURESIS -->
+
                 <input type="text" id="diuresis_manana" class="campo">
                 <input type="text" id="diuresis_tarde" class="campo">
                 <input type="text" id="diuresis_noche" class="campo">
 
-                <!-- OTROS -->
                 <textarea id="drenajes" class="campo"></textarea>
                 <textarea id="sng_vomitos" class="campo"></textarea>
                 <textarea id="deposiciones" class="campo"></textarea>
 
-                <!-- CONTROLES MAÑANA -->
                 <input type="text" class="campo control-manana-fr">
                 <input type="text" class="campo control-manana-te">
                 <input type="text" class="campo control-manana-p">
                 <input type="text" class="campo control-manana-ta">
 
-                <!-- CONTROLES TARDE -->
                 <input type="text" class="campo control-tarde-fr">
                 <input type="text" class="campo control-tarde-te">
                 <input type="text" class="campo control-tarde-p">
                 <input type="text" class="campo control-tarde-ta">
 
-                <!-- CONTROLES NOCHE -->
                 <input type="text" class="campo control-noche-fr">
                 <input type="text" class="campo control-noche-te">
                 <input type="text" class="campo control-noche-p">
                 <input type="text" class="campo control-noche-ta">
 
-                <!-- OBSERVACIONES -->
-                <textarea id="observaciones_enfermeria" class="campo"></textarea>
-
             </div>
-
             <div class="actions">
                 <button type="submit" class="btn-submit">ENVIAR FORMULARIO</button>
             </div>
         </form>
-
         <div id="message" class="message"></div>
     </div>
-
     <script src="script.js"></script>
 </body>
 
