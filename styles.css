@@ -1,4 +1,4 @@
-@page {
+HTML completo: html< !DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Formulario Nº 5 - Clínica Modelo</title><link rel="stylesheet" href="styles.css"></head><body><div class="page"><form id="formulario5"><div class="form-container"><input type="text" id="fecha" class="campo" placeholder="DD/MM/AAAA"><input type="text" id="hab" class="campo"><input type="text" id="mutual" class="campo"><input type="text" id="dr" class="campo"><input type="text" id="pte" class="campo"><div class="campo-tramite"><label><input type="checkbox" name="tramite" value="SI"></label><label><input type="checkbox" name="tramite" value="NO"></label></div><input type="text" id="diagnostico" class="campo">< !-- INDICACIONES MÉDICAS --><input type="text" id="csv" class="campo"><input type="text" id="tomografia" class="campo"><input type="text" id="electrocardiograma" class="campo"><input type="text" id="laboratorio" class="campo"><input type="text" id="medicacion" class="campo"><textarea id="dieta" class="campo"></textarea><textarea id="hidratacion" class="campo"></textarea><input type="text" id="diuresis_manana" class="campo"><input type="text" id="diuresis_tarde" class="campo"><input type="text" id="diuresis_noche" class="campo"><textarea id="drenajes" class="campo"></textarea><textarea id="sng_vomitos" class="campo"></textarea><textarea id="deposiciones" class="campo"></textarea><input type="text" class="campo control-manana-fr"><input type="text" class="campo control-manana-te"><input type="text" class="campo control-manana-p"><input type="text" class="campo control-manana-ta"><input type="text" class="campo control-manana-o2"><input type="text" class="campo control-tarde-fr"><input type="text" class="campo control-tarde-te"><input type="text" class="campo control-tarde-p"><input type="text" class="campo control-tarde-ta"><input type="text" class="campo control-tarde-o2"><input type="text" class="campo control-noche-fr"><input type="text" class="campo control-noche-te"><input type="text" class="campo control-noche-p"><input type="text" class="campo control-noche-ta"><input type="text" class="campo control-noche-o2"></div><div class="actions"><button type="submit" class="btn-submit">ENVIAR FORMULARIO</button></div></form><div id="message" class="message"></div></div><script src="script.js"></script></body></html>CSS completo: css@page {
     size: 340mm 220mm;
     margin: 0;
 }
@@ -119,6 +119,37 @@ textarea:focus {
     gap: 16px;
 }
 
+/* INDICACIONES MÉDICAS — CSV 50px bajo tramite, luego 40px entre cada uno */
+#csv {
+    top: 93px;
+    left: 55px;
+    width: 615px;
+}
+
+#tomografia {
+    top: 133px;
+    left: 55px;
+    width: 615px;
+}
+
+#electrocardiograma {
+    top: 173px;
+    left: 55px;
+    width: 615px;
+}
+
+#laboratorio {
+    top: 213px;
+    left: 55px;
+    width: 615px;
+}
+
+#medicacion {
+    top: 253px;
+    left: 55px;
+    width: 615px;
+}
+
 #dieta {
     top: 419px;
     left: 80px;
@@ -174,11 +205,11 @@ textarea:focus {
     height: 155px;
 }
 
-/* CONTROLES MAÑANA — FR:691 Te:718 P:745 TA:772 O2:798 */
+/* CONTROLES MAÑANA — FR:690 Te:717 P:744 TA:771 O2:797 */
 .control-manana-fr {
     position: absolute;
     top: 533px;
-    left: 691px;
+    left: 690px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -188,7 +219,7 @@ textarea:focus {
 .control-manana-te {
     position: absolute;
     top: 533px;
-    left: 718px;
+    left: 717px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -198,7 +229,7 @@ textarea:focus {
 .control-manana-p {
     position: absolute;
     top: 533px;
-    left: 745px;
+    left: 744px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -208,7 +239,7 @@ textarea:focus {
 .control-manana-ta {
     position: absolute;
     top: 533px;
-    left: 772px;
+    left: 771px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -218,18 +249,18 @@ textarea:focus {
 .control-manana-o2 {
     position: absolute;
     top: 533px;
-    left: 798px;
+    left: 797px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES TARDE — FR:691 Te:718 P:745 TA:772 O2:798 */
+/* CONTROLES TARDE */
 .control-tarde-fr {
     position: absolute;
     top: 614px;
-    left: 691px;
+    left: 690px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -239,7 +270,7 @@ textarea:focus {
 .control-tarde-te {
     position: absolute;
     top: 614px;
-    left: 718px;
+    left: 717px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -249,7 +280,7 @@ textarea:focus {
 .control-tarde-p {
     position: absolute;
     top: 614px;
-    left: 745px;
+    left: 744px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -259,7 +290,7 @@ textarea:focus {
 .control-tarde-ta {
     position: absolute;
     top: 614px;
-    left: 772px;
+    left: 771px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -269,18 +300,18 @@ textarea:focus {
 .control-tarde-o2 {
     position: absolute;
     top: 614px;
-    left: 798px;
+    left: 797px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
-/* CONTROLES NOCHE — FR:691 Te:718 P:745 TA:772 O2:798 */
+/* CONTROLES NOCHE */
 .control-noche-fr {
     position: absolute;
     top: 697px;
-    left: 691px;
+    left: 690px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -290,7 +321,7 @@ textarea:focus {
 .control-noche-te {
     position: absolute;
     top: 697px;
-    left: 718px;
+    left: 717px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -300,7 +331,7 @@ textarea:focus {
 .control-noche-p {
     position: absolute;
     top: 697px;
-    left: 745px;
+    left: 744px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -310,7 +341,7 @@ textarea:focus {
 .control-noche-ta {
     position: absolute;
     top: 697px;
-    left: 772px;
+    left: 771px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -320,7 +351,7 @@ textarea:focus {
 .control-noche-o2 {
     position: absolute;
     top: 697px;
-    left: 798px;
+    left: 797px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
