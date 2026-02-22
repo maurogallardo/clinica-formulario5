@@ -107,8 +107,8 @@ textarea:focus {
 
 #diagnostico {
     top: 43px;
-    left: 285px;
-    width: 610px;
+    left: 268px;
+    width: 560px;
 }
 
 .campo-tramite {
@@ -137,47 +137,48 @@ textarea:focus {
 
 #diuresis_manana {
     top: 513px;
-    left: 388px;
+    left: 383px;
     width: 60px;
 }
 
 #diuresis_tarde {
     top: 593px;
-    left: 388px;
+    left: 383px;
     width: 60px;
 }
 
 #diuresis_noche {
     top: 669px;
-    left: 388px;
+    left: 383px;
     width: 60px;
 }
 
 #drenajes {
-    top: 480px;
-    left: 469px;
+    top: 490px;
+    left: 464px;
     width: 60px;
     height: 155px;
 }
 
 #sng_vomitos {
-    top: 480px;
-    left: 549px;
+    top: 490px;
+    left: 544px;
     width: 60px;
     height: 155px;
 }
 
 #deposiciones {
-    top: 480px;
-    left: 629px;
+    top: 490px;
+    left: 624px;
     width: 60px;
     height: 155px;
 }
 
+/* CONTROLES MAÑANA — 40px izquierda */
 .control-manana-fr {
     position: absolute;
     top: 533px;
-    left: 748px;
+    left: 708px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -187,7 +188,7 @@ textarea:focus {
 .control-manana-te {
     position: absolute;
     top: 533px;
-    left: 779px;
+    left: 739px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -197,7 +198,7 @@ textarea:focus {
 .control-manana-p {
     position: absolute;
     top: 533px;
-    left: 810px;
+    left: 770px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -207,17 +208,18 @@ textarea:focus {
 .control-manana-ta {
     position: absolute;
     top: 533px;
-    left: 841px;
+    left: 801px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
+/* CONTROLES TARDE — 40px izquierda */
 .control-tarde-fr {
     position: absolute;
     top: 614px;
-    left: 748px;
+    left: 708px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -227,7 +229,7 @@ textarea:focus {
 .control-tarde-te {
     position: absolute;
     top: 614px;
-    left: 779px;
+    left: 739px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -237,7 +239,7 @@ textarea:focus {
 .control-tarde-p {
     position: absolute;
     top: 614px;
-    left: 810px;
+    left: 770px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -247,17 +249,18 @@ textarea:focus {
 .control-tarde-ta {
     position: absolute;
     top: 614px;
-    left: 841px;
+    left: 801px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
     border: 1px solid #22c55e;
 }
 
+/* CONTROLES NOCHE — 40px izquierda */
 .control-noche-fr {
     position: absolute;
     top: 697px;
-    left: 748px;
+    left: 708px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -267,7 +270,7 @@ textarea:focus {
 .control-noche-te {
     position: absolute;
     top: 697px;
-    left: 779px;
+    left: 739px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -277,7 +280,7 @@ textarea:focus {
 .control-noche-p {
     position: absolute;
     top: 697px;
-    left: 810px;
+    left: 770px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
@@ -287,7 +290,7 @@ textarea:focus {
 .control-noche-ta {
     position: absolute;
     top: 697px;
-    left: 841px;
+    left: 801px;
     width: 22px;
     text-align: center;
     font-size: 9pt;
