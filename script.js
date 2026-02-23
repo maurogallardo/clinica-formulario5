@@ -1,6 +1,7 @@
 const N8N_WEBHOOK_URL = 'https://TU-N8N-URL/webhook/formulario5';
+const N8N_VOZ_URL = 'https://TU-N8N-URL/webhook/formulario5-voz';
 
-// ─── ENVÍO FORMULARIO ───────────────────────────────────────────────
+// ─── ENVÍO FORMULARIO ────────────────────────────────────────────────
 document.getElementById('formulario5').addEventListener('submit', async function (e) {
     e.preventDefault();
 
@@ -72,7 +73,7 @@ document.getElementById('formulario5').addEventListener('submit', async function
     btn.disabled = false;
 });
 
-// ─── MICRÓFONO / DICTADO POR VOZ ────────────────────────────────────
+// ─── MICRÓFONO CONTINUO + IA ─────────────────────────────────────────
 const btnMic = document.getElementById('btn-mic');
 const micStatus = document.getElementById('mic-status');
 
@@ -80,58 +81,84 @@ const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogni
 
 if (!SpeechRecognition) {
     btnMic.disabled = true;
-    btnMic.title = 'Tu navegador no soporta dictado por voz';
-    micStatus.textContent = 'Dictado no disponible en este navegador';
+    micStatus.textContent = 'Dictado no disponible en este navegador. Usá Chrome o Edge.';
 } else {
     const recognition = new SpeechRecognition();
     recognition.lang = 'es-AR';
-    recognition.continuous = false;
+    recognition.continuous = true;
     recognition.interimResults = false;
 
-    let campoActivo = null;
     let grabando = false;
-
-    // Al hacer foco en cualquier campo, lo guardamos como activo
-    document.querySelectorAll('input[type="text"], textarea').forEach(campo => {
-        campo.addEventListener('focus', () => {
-            campoActivo = campo;
-            micStatus.textContent = `Campo seleccionado: ${campo.id || campo.className.split(' ')[1] || 'campo'}`;
-        });
-    });
+    let transcripcionCompleta = '';
 
     btnMic.addEventListener('click', () => {
-        if (!campoActivo) {
-            micStatus.textContent = '⚠️ Primero hacé clic en el campo donde querés dictar';
-            return;
-        }
-
         if (grabando) {
             recognition.stop();
+        } else {
+            transcripcionCompleta = '';
+            recognition.start();
+        }
+    });
+
+    recognition.onstart = () => {
+        grabando = true;
+        btnMic.classList.add('grabando');
+        btnMic.textContent = '⏹';
+        micStatus.textContent = '🎤 Escuchando... hablá todo lo que necesitás. Apretá el botón para terminar.';
+    };
+
+    recognition.onresult = (event) => {
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+            if (event.results[i].isFinal) {
+                transcripcionCompleta += ' ' + event.results[i][0].transcript;
+            }
+        }
+        micStatus.textContent = '🎤 Escuchando: ' + transcripcionCompleta.trim().slice(-80) + '...';
+    };
+
+    recognition.onend = async () => {
+        grabando = false;
+        btnMic.classList.remove('grabando');
+        btnMic.textContent = '🎤';
+
+        if (!transcripcionCompleta.trim()) {
+            micStatus.textContent = '⚠️ No se detectó audio.';
             return;
         }
 
-        recognition.start();
-        grabando = true;
-        btnMic.classList.add('grabando');
-        micStatus.textContent = '🎤 Escuchando...';
-    });
+        micStatus.textContent = '⏳ Procesando con IA...';
 
-    recognition.onresult = (event) => {
-        const texto = event.results[0][0].transcript;
-        if (campoActivo) {
-            campoActivo.value += (campoActivo.value ? ' ' : '') + texto;
+        try {
+            const response = await fetch(N8N_VOZ_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ transcripcion: transcripcionCompleta.trim() })
+            });
+
+            if (!response.ok) throw new Error('Error en n8n');
+
+            const data = await response.json();
+
+            // Autocompletar todos los campos con el JSON que devuelve la IA
+            Object.keys(data).forEach(key => {
+                const el = document.getElementById(key)
+                    || document.querySelector('.' + key);
+                if (el && data[key] !== null && data[key] !== undefined) {
+                    el.value = data[key];
+                }
+            });
+
+            micStatus.textContent = '✅ Campos completados automáticamente. Revisá y enviá.';
+
+        } catch (error) {
+            micStatus.textContent = '❌ Error al procesar con IA: ' + error.message;
         }
-        micStatus.textContent = '✅ Dictado guardado';
-    };
-
-    recognition.onend = () => {
-        grabando = false;
-        btnMic.classList.remove('grabando');
     };
 
     recognition.onerror = (event) => {
         grabando = false;
         btnMic.classList.remove('grabando');
-        micStatus.textContent = '❌ Error: ' + event.error;
+        btnMic.textContent = '🎤';
+        micStatus.textContent = '❌ Error de micrófono: ' + event.error;
     };
 }
