@@ -1,14 +1,16 @@
 const N8N_WEBHOOK_URL = 'https://n8n-production-0142.up.railway.app/webhook/formulario5';
 const N8N_VOZ_URL = 'https://n8n-production-0142.up.railway.app/webhook/formulario5-voz';
 
-// ─── ENVÍO FORMULARIO ────────────────────────────────────────────────
 document.getElementById('formulario5').addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const btn = document.querySelector('.btn-submit');
     const msg = document.getElementById('message');
+    const micStatus = document.getElementById('mic-status');
+
     btn.disabled = true;
     msg.style.display = 'none';
+    micStatus.textContent = '';
 
     const tramites = document.querySelectorAll('input[name="tramite"]:checked');
     const tramiteValor = Array.from(tramites).map(t => t.value).join(', ');
@@ -59,29 +61,31 @@ document.getElementById('formulario5').addEventListener('submit', async function
         });
 
         if (response.ok) {
-            msg.textContent = '✅ Formulario enviado correctamente.';
+            msg.textContent = '✅ Formulario enviado exitosamente.';
             msg.className = 'message success';
+            msg.style.display = 'block';
+            setTimeout(() => { msg.style.display = 'none'; }, 3000);
         } else {
             throw new Error('Error en el servidor');
         }
     } catch (error) {
         msg.textContent = '❌ Error al enviar. Verificá la conexión.';
         msg.className = 'message error';
+        msg.style.display = 'block';
+        setTimeout(() => { msg.style.display = 'none'; }, 3000);
     }
 
-    msg.style.display = 'block';
     btn.disabled = false;
 });
 
-// ─── MICRÓFONO CONTINUO + IA ─────────────────────────────────────────
+// ─── MICRÓFONO ───────────────────────────────────────────────────────
 const btnMic = document.getElementById('btn-mic');
 const micStatus = document.getElementById('mic-status');
-
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
 if (!SpeechRecognition) {
     btnMic.disabled = true;
-    micStatus.textContent = 'Dictado no disponible en este navegador. Usá Chrome o Edge.';
+    micStatus.textContent = 'Dictado no disponible. Usá Chrome o Edge.';
 } else {
     const recognition = new SpeechRecognition();
     recognition.lang = 'es-AR';
@@ -104,7 +108,7 @@ if (!SpeechRecognition) {
         grabando = true;
         btnMic.classList.add('grabando');
         btnMic.textContent = '⏹';
-        micStatus.textContent = '🎤 Escuchando... hablá todo lo que necesitás. Apretá el botón para terminar.';
+        micStatus.textContent = '🎤 Escuchando... apretá el botón para terminar.';
     };
 
     recognition.onresult = (event) => {
@@ -113,7 +117,7 @@ if (!SpeechRecognition) {
                 transcripcionCompleta += ' ' + event.results[i][0].transcript;
             }
         }
-        micStatus.textContent = '🎤 Escuchando: ' + transcripcionCompleta.trim().slice(-80) + '...';
+        micStatus.textContent = '🎤 ' + transcripcionCompleta.trim().slice(-80) + '...';
     };
 
     recognition.onend = async () => {
@@ -138,19 +142,15 @@ if (!SpeechRecognition) {
             if (!response.ok) throw new Error('Error en n8n');
 
             const data = await response.json();
-
             Object.keys(data).forEach(key => {
-                const el = document.getElementById(key)
-                    || document.querySelector('.' + key);
+                const el = document.getElementById(key) || document.querySelector('.' + key);
                 if (el && data[key] !== null && data[key] !== undefined) {
                     el.value = data[key];
                 }
             });
-
-            micStatus.textContent = '✅ Campos completados automáticamente. Revisá y enviá.';
-
+            micStatus.textContent = '✅ Campos completados. Revisá y enviá.';
         } catch (error) {
-            micStatus.textContent = '❌ Error al procesar con IA: ' + error.message;
+            micStatus.textContent = '⚠️ IA no disponible aún.';
         }
     };
 
@@ -158,6 +158,6 @@ if (!SpeechRecognition) {
         grabando = false;
         btnMic.classList.remove('grabando');
         btnMic.textContent = '🎤';
-        micStatus.textContent = '❌ Error de micrófono: ' + event.error;
+        micStatus.textContent = '❌ Error: ' + event.error;
     };
 }
