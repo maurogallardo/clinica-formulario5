@@ -1,5 +1,5 @@
-const N8N_WEBHOOK_URL = 'https://TU-N8N-URL/webhook/formulario5';
-const N8N_VOZ_URL = 'https://TU-N8N-URL/webhook/formulario5-voz';
+const N8N_WEBHOOK_URL = 'https://n8n-production-0142.up.railway.app/webhook/formulario5';
+const N8N_VOZ_URL = 'https://n8n-production-0142.up.railway.app/webhook/formulario5-voz';
 
 // ─── ENVÍO FORMULARIO ────────────────────────────────────────────────
 document.getElementById('formulario5').addEventListener('submit', async function (e) {
@@ -139,7 +139,6 @@ if (!SpeechRecognition) {
 
             const data = await response.json();
 
-            // Autocompletar todos los campos con el JSON que devuelve la IA
             Object.keys(data).forEach(key => {
                 const el = document.getElementById(key)
                     || document.querySelector('.' + key);
