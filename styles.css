@@ -1,4 +1,4 @@
-@page {
+Solo cambian los top de las filas 2 a 5: Fila 1 (csv): 94px → queda igual Fila 2 (tom): 146 - 2=144px Fila 3 (eco): 194 - 1=193px Fila 4 (lab): 244 - 2=242px Fila 5 (med): 294 - 2=292px css@page {
     size: 340mm 220mm;
     margin: 0;
 }
@@ -378,7 +378,6 @@ textarea:focus {
 }
 
 /* ── GRILLA DE HORARIOS ── */
-/* ancho: 40px, gap: 1px → paso de 41px | top -3px en todas las filas */
 .horario-cell {
     position: absolute;
     width: 40px;
@@ -396,7 +395,7 @@ textarea:focus {
     background: rgba(255, 255, 255, 0.9);
 }
 
-/* CSV — top: 97-3=94 */
+/* FILA 1 — CSV: 94px (queda igual) */
 .horario-csv-0600 {
     top: 94px;
     left: 401px;
@@ -447,207 +446,207 @@ textarea:focus {
     left: 770px;
 }
 
-/* TOMOGRAFÍA — top: 149-3=146 */
+/* FILA 2 — TOMOGRAFÍA: 146-2=144px */
 .horario-tom-0600 {
-    top: 146px;
+    top: 144px;
     left: 401px;
 }
 
 .horario-tom-0800 {
-    top: 146px;
+    top: 144px;
     left: 442px;
 }
 
 .horario-tom-1000 {
-    top: 146px;
+    top: 144px;
     left: 483px;
 }
 
 .horario-tom-1200 {
-    top: 146px;
+    top: 144px;
     left: 524px;
 }
 
 .horario-tom-1400 {
-    top: 146px;
+    top: 144px;
     left: 565px;
 }
 
 .horario-tom-1600 {
-    top: 146px;
+    top: 144px;
     left: 606px;
 }
 
 .horario-tom-1800 {
-    top: 146px;
+    top: 144px;
     left: 647px;
 }
 
 .horario-tom-2000 {
-    top: 146px;
+    top: 144px;
     left: 688px;
 }
 
 .horario-tom-2200 {
-    top: 146px;
+    top: 144px;
     left: 729px;
 }
 
 .horario-tom-2400 {
-    top: 146px;
+    top: 144px;
     left: 770px;
 }
 
-/* ELECTROCARDIOGRAMA — top: 197-3=194 */
+/* FILA 3 — ELECTROCARDIOGRAMA: 194-1=193px */
 .horario-eco-0600 {
-    top: 194px;
+    top: 193px;
     left: 401px;
 }
 
 .horario-eco-0800 {
-    top: 194px;
+    top: 193px;
     left: 442px;
 }
 
 .horario-eco-1000 {
-    top: 194px;
+    top: 193px;
     left: 483px;
 }
 
 .horario-eco-1200 {
-    top: 194px;
+    top: 193px;
     left: 524px;
 }
 
 .horario-eco-1400 {
-    top: 194px;
+    top: 193px;
     left: 565px;
 }
 
 .horario-eco-1600 {
-    top: 194px;
+    top: 193px;
     left: 606px;
 }
 
 .horario-eco-1800 {
-    top: 194px;
+    top: 193px;
     left: 647px;
 }
 
 .horario-eco-2000 {
-    top: 194px;
+    top: 193px;
     left: 688px;
 }
 
 .horario-eco-2200 {
-    top: 194px;
+    top: 193px;
     left: 729px;
 }
 
 .horario-eco-2400 {
-    top: 194px;
+    top: 193px;
     left: 770px;
 }
 
-/* LABORATORIO — top: 247-3=244 */
+/* FILA 4 — LABORATORIO: 244-2=242px */
 .horario-lab-0600 {
-    top: 244px;
+    top: 242px;
     left: 401px;
 }
 
 .horario-lab-0800 {
-    top: 244px;
+    top: 242px;
     left: 442px;
 }
 
 .horario-lab-1000 {
-    top: 244px;
+    top: 242px;
     left: 483px;
 }
 
 .horario-lab-1200 {
-    top: 244px;
+    top: 242px;
     left: 524px;
 }
 
 .horario-lab-1400 {
-    top: 244px;
+    top: 242px;
     left: 565px;
 }
 
 .horario-lab-1600 {
-    top: 244px;
+    top: 242px;
     left: 606px;
 }
 
 .horario-lab-1800 {
-    top: 244px;
+    top: 242px;
     left: 647px;
 }
 
 .horario-lab-2000 {
-    top: 244px;
+    top: 242px;
     left: 688px;
 }
 
 .horario-lab-2200 {
-    top: 244px;
+    top: 242px;
     left: 729px;
 }
 
 .horario-lab-2400 {
-    top: 244px;
+    top: 242px;
     left: 770px;
 }
 
-/* MEDICACIÓN — top: 297-3=294 */
+/* FILA 5 — MEDICACIÓN: 294-2=292px */
 .horario-med-0600 {
-    top: 294px;
+    top: 292px;
     left: 401px;
 }
 
 .horario-med-0800 {
-    top: 294px;
+    top: 292px;
     left: 442px;
 }
 
 .horario-med-1000 {
-    top: 294px;
+    top: 292px;
     left: 483px;
 }
 
 .horario-med-1200 {
-    top: 294px;
+    top: 292px;
     left: 524px;
 }
 
 .horario-med-1400 {
-    top: 294px;
+    top: 292px;
     left: 565px;
 }
 
 .horario-med-1600 {
-    top: 294px;
+    top: 292px;
     left: 606px;
 }
 
 .horario-med-1800 {
-    top: 294px;
+    top: 292px;
     left: 647px;
 }
 
 .horario-med-2000 {
-    top: 294px;
+    top: 292px;
     left: 688px;
 }
 
 .horario-med-2200 {
-    top: 294px;
+    top: 292px;
     left: 729px;
 }
 
 .horario-med-2400 {
-    top: 294px;
+    top: 292px;
     left: 770px;
 }
 
