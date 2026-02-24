@@ -142,7 +142,8 @@ if (!SpeechRecognition) {
 
             const data = await response.json();
             Object.keys(data).forEach(key => {
-                const el = document.getElementById(key) || document.querySelector('.' + key);
+                const classMapped = key.replace('controles_', 'control-').replace(/_/g, '-');
+                const el = document.getElementById(key) || document.querySelector('.' + classMapped);
                 if (el && data[key] !== null && data[key] !== undefined) {
                     el.value = data[key];
                 }
