@@ -64,6 +64,7 @@ document.getElementById('formulario5').addEventListener('submit', async function
             msg.className = 'message success';
             msg.style.display = 'block';
             setTimeout(() => { msg.style.display = 'none'; }, 3000);
+            setTimeout(() => { document.getElementById('formulario5').reset(); }, 3000);
         } else {
             throw new Error('Error en el servidor');
         }
