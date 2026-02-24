@@ -31,11 +31,25 @@ body {
     height: 760px;
     margin: 0 auto;
     position: relative;
-    background-image: url('formulario5-bg.png'),
-        repeating-linear-gradient(to right, rgba(255, 0, 0, 0.4) 0px, rgba(255, 0, 0, 0.4) 2px, transparent 2px, transparent 50px),
-        repeating-linear-gradient(to bottom, rgba(255, 0, 0, 0.4) 0px, rgba(255, 0, 0, 0.4) 2px, transparent 2px, transparent 50px);
-    background-size: 100% 100%, 50px 100%, 100% 50px;
-    background-repeat: no-repeat, repeat, repeat;
+    background-image: url('formulario5-bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* GRILLA ROJA DE REFERENCIA — BORRAR CUANDO TERMINEMOS */
+.form-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    background-image:
+        repeating-linear-gradient(to right, rgba(255, 0, 0, 0.5) 0px, rgba(255, 0, 0, 0.5) 1px, transparent 1px, transparent 50px),
+        repeating-linear-gradient(to bottom, rgba(255, 0, 0, 0.5) 0px, rgba(255, 0, 0, 0.5) 1px, transparent 1px, transparent 50px);
 }
 
 input[type="text"] {
