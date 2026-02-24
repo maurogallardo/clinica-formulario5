@@ -75,34 +75,40 @@ textarea:focus {
     position: absolute;
 }
 
+/* ── FILA SUPERIOR sin contorno verde ── */
 #fecha {
     top: 25px;
     left: 62px;
-    width: 95px;
+    width: 81px;
+    border: 1px solid transparent;
 }
 
 #hab {
     top: 25px;
     left: 174px;
     width: 45px;
+    border: 1px solid transparent;
 }
 
 #mutual {
     top: 25px;
     left: 256px;
     width: 125px;
+    border: 1px solid transparent;
 }
 
 #dr {
     top: 25px;
     left: 399px;
     width: 180px;
+    border: 1px solid transparent;
 }
 
 #pte {
     top: 25px;
     left: 635px;
     width: 185px;
+    border: 1px solid transparent;
 }
 
 #diagnostico {
@@ -119,44 +125,50 @@ textarea:focus {
     gap: 16px;
 }
 
+/* ── INDICACIONES MÉDICAS ── */
 #csv {
-    top: 105px;
+    top: 97px;
     left: 47px;
     width: 345px;
-    height: 32px;
-    padding-left: 50px;
+    height: 52px;
+    padding-left: 2px;
+    text-indent: 20px;
 }
 
 #tomografia {
-    top: 149px;
+    top: 153px;
     left: 47px;
     width: 345px;
-    height: 32px;
-    padding-left: 95px;
+    height: 52px;
+    padding-left: 2px;
+    text-indent: 55px;
 }
 
 #electrocardiograma {
     top: 195px;
     left: 47px;
     width: 345px;
-    height: 32px;
-    padding-left: 170px;
+    height: 52px;
+    padding-left: 2px;
+    text-indent: 170px;
 }
 
 #laboratorio {
-    top: 245px;
+    top: 247px;
     left: 47px;
     width: 345px;
-    height: 32px;
-    padding-left: 100px;
+    height: 52px;
+    padding-left: 2px;
+    text-indent: 80px;
 }
 
 #medicacion {
-    top: 295px;
+    top: 299px;
     left: 47px;
     width: 345px;
-    height: 32px;
-    padding-left: 90px;
+    height: 52px;
+    padding-left: 2px;
+    text-indent: 70px;
 }
 
 #dieta {
@@ -214,6 +226,7 @@ textarea:focus {
     height: 155px;
 }
 
+/* ── CONTROLES DE ENFERMERÍA ── */
 .control-manana-fr {
     position: absolute;
     top: 533px;
@@ -364,6 +377,280 @@ textarea:focus {
     border: 1px solid #22c55e;
 }
 
+/* ── GRILLA DE HORARIOS ── */
+.horario-cell {
+    position: absolute;
+    width: 27px;
+    height: 28px;
+    background: transparent;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    font-size: 8pt;
+    text-align: center;
+    color: #000;
+    padding: 0;
+}
+
+.horario-cell:focus {
+    outline: 2px solid #16a34a;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* CSV */
+.horario-csv-0600 {
+    top: 97px;
+    left: 692px;
+}
+
+.horario-csv-0800 {
+    top: 97px;
+    left: 721px;
+}
+
+.horario-csv-1000 {
+    top: 97px;
+    left: 750px;
+}
+
+.horario-csv-1200 {
+    top: 97px;
+    left: 779px;
+}
+
+.horario-csv-1400 {
+    top: 97px;
+    left: 808px;
+}
+
+.horario-csv-1600 {
+    top: 97px;
+    left: 837px;
+}
+
+.horario-csv-1800 {
+    top: 97px;
+    left: 866px;
+}
+
+.horario-csv-2000 {
+    top: 97px;
+    left: 895px;
+}
+
+.horario-csv-2200 {
+    top: 97px;
+    left: 924px;
+}
+
+.horario-csv-2400 {
+    top: 97px;
+    left: 953px;
+}
+
+/* Tomografía */
+.horario-tom-0600 {
+    top: 153px;
+    left: 692px;
+}
+
+.horario-tom-0800 {
+    top: 153px;
+    left: 721px;
+}
+
+.horario-tom-1000 {
+    top: 153px;
+    left: 750px;
+}
+
+.horario-tom-1200 {
+    top: 153px;
+    left: 779px;
+}
+
+.horario-tom-1400 {
+    top: 153px;
+    left: 808px;
+}
+
+.horario-tom-1600 {
+    top: 153px;
+    left: 837px;
+}
+
+.horario-tom-1800 {
+    top: 153px;
+    left: 866px;
+}
+
+.horario-tom-2000 {
+    top: 153px;
+    left: 895px;
+}
+
+.horario-tom-2200 {
+    top: 153px;
+    left: 924px;
+}
+
+.horario-tom-2400 {
+    top: 153px;
+    left: 953px;
+}
+
+/* Electrocardiograma */
+.horario-eco-0600 {
+    top: 195px;
+    left: 692px;
+}
+
+.horario-eco-0800 {
+    top: 195px;
+    left: 721px;
+}
+
+.horario-eco-1000 {
+    top: 195px;
+    left: 750px;
+}
+
+.horario-eco-1200 {
+    top: 195px;
+    left: 779px;
+}
+
+.horario-eco-1400 {
+    top: 195px;
+    left: 808px;
+}
+
+.horario-eco-1600 {
+    top: 195px;
+    left: 837px;
+}
+
+.horario-eco-1800 {
+    top: 195px;
+    left: 866px;
+}
+
+.horario-eco-2000 {
+    top: 195px;
+    left: 895px;
+}
+
+.horario-eco-2200 {
+    top: 195px;
+    left: 924px;
+}
+
+.horario-eco-2400 {
+    top: 195px;
+    left: 953px;
+}
+
+/* Laboratorio */
+.horario-lab-0600 {
+    top: 247px;
+    left: 692px;
+}
+
+.horario-lab-0800 {
+    top: 247px;
+    left: 721px;
+}
+
+.horario-lab-1000 {
+    top: 247px;
+    left: 750px;
+}
+
+.horario-lab-1200 {
+    top: 247px;
+    left: 779px;
+}
+
+.horario-lab-1400 {
+    top: 247px;
+    left: 808px;
+}
+
+.horario-lab-1600 {
+    top: 247px;
+    left: 837px;
+}
+
+.horario-lab-1800 {
+    top: 247px;
+    left: 866px;
+}
+
+.horario-lab-2000 {
+    top: 247px;
+    left: 895px;
+}
+
+.horario-lab-2200 {
+    top: 247px;
+    left: 924px;
+}
+
+.horario-lab-2400 {
+    top: 247px;
+    left: 953px;
+}
+
+/* Medicación */
+.horario-med-0600 {
+    top: 299px;
+    left: 692px;
+}
+
+.horario-med-0800 {
+    top: 299px;
+    left: 721px;
+}
+
+.horario-med-1000 {
+    top: 299px;
+    left: 750px;
+}
+
+.horario-med-1200 {
+    top: 299px;
+    left: 779px;
+}
+
+.horario-med-1400 {
+    top: 299px;
+    left: 808px;
+}
+
+.horario-med-1600 {
+    top: 299px;
+    left: 837px;
+}
+
+.horario-med-1800 {
+    top: 299px;
+    left: 866px;
+}
+
+.horario-med-2000 {
+    top: 299px;
+    left: 895px;
+}
+
+.horario-med-2200 {
+    top: 299px;
+    left: 924px;
+}
+
+.horario-med-2400 {
+    top: 299px;
+    left: 953px;
+}
+
+/* ── ACCIONES ── */
 .actions {
     margin-top: 20px;
     text-align: center;

@@ -163,3 +163,12 @@ if (!SpeechRecognition) {
         micStatus.textContent = '❌ Error: ' + event.error;
     };
 }
+```
+
+---
+
+Git:
+```
+git add index.html styles.css script.js
+git commit - m "fix: ajustes visuales, grilla horarios, campos sin borde"
+git push
