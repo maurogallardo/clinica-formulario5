@@ -1,5 +1,4 @@
 const N8N_WEBHOOK_URL = 'https://n8n-production-0142.up.railway.app/webhook/formulario5';
-const N8N_VOZ_URL = 'https://n8n-production-0142.up.railway.app/webhook/formulario5-voz';
 
 document.getElementById('formulario5').addEventListener('submit', async function (e) {
     e.preventDefault();
@@ -133,7 +132,7 @@ if (!SpeechRecognition) {
         micStatus.textContent = '⏳ Procesando con IA...';
 
         try {
-            const response = await fetch(N8N_VOZ_URL, {
+            const response = await fetch(N8N_WEBHOOK_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ transcripcion: transcripcionCompleta.trim() })
@@ -150,7 +149,8 @@ if (!SpeechRecognition) {
             });
             micStatus.textContent = '✅ Campos completados. Revisá y enviá.';
         } catch (error) {
-            micStatus.textContent = '⚠️ IA no disponible aún.';
+            micStatus.textContent = '⚠️ Error al procesar. Intentá de nuevo.';
+            console.error(error);
         }
     };
 
