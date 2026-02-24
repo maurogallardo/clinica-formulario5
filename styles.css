@@ -378,7 +378,7 @@ textarea:focus {
 }
 
 /* ── GRILLA DE HORARIOS ── */
-/* ancho: 40px, gap: 7px → paso de 47px entre columnas */
+/* ancho: 40px, gap: 1px → paso de 41px | top -3px en todas las filas */
 .horario-cell {
     position: absolute;
     width: 40px;
@@ -396,259 +396,259 @@ textarea:focus {
     background: rgba(255, 255, 255, 0.9);
 }
 
-/* CSV */
+/* CSV — top: 97-3=94 */
 .horario-csv-0600 {
-    top: 97px;
+    top: 94px;
     left: 401px;
 }
 
 .horario-csv-0800 {
-    top: 97px;
-    left: 448px;
+    top: 94px;
+    left: 442px;
 }
 
 .horario-csv-1000 {
-    top: 97px;
-    left: 495px;
+    top: 94px;
+    left: 483px;
 }
 
 .horario-csv-1200 {
-    top: 97px;
-    left: 542px;
+    top: 94px;
+    left: 524px;
 }
 
 .horario-csv-1400 {
-    top: 97px;
-    left: 589px;
+    top: 94px;
+    left: 565px;
 }
 
 .horario-csv-1600 {
-    top: 97px;
-    left: 636px;
+    top: 94px;
+    left: 606px;
 }
 
 .horario-csv-1800 {
-    top: 97px;
-    left: 683px;
+    top: 94px;
+    left: 647px;
 }
 
 .horario-csv-2000 {
-    top: 97px;
-    left: 730px;
+    top: 94px;
+    left: 688px;
 }
 
 .horario-csv-2200 {
-    top: 97px;
-    left: 777px;
+    top: 94px;
+    left: 729px;
 }
 
 .horario-csv-2400 {
-    top: 97px;
-    left: 824px;
+    top: 94px;
+    left: 770px;
 }
 
-/* TOMOGRAFÍA */
+/* TOMOGRAFÍA — top: 149-3=146 */
 .horario-tom-0600 {
-    top: 149px;
+    top: 146px;
     left: 401px;
 }
 
 .horario-tom-0800 {
-    top: 149px;
-    left: 448px;
+    top: 146px;
+    left: 442px;
 }
 
 .horario-tom-1000 {
-    top: 149px;
-    left: 495px;
+    top: 146px;
+    left: 483px;
 }
 
 .horario-tom-1200 {
-    top: 149px;
-    left: 542px;
+    top: 146px;
+    left: 524px;
 }
 
 .horario-tom-1400 {
-    top: 149px;
-    left: 589px;
+    top: 146px;
+    left: 565px;
 }
 
 .horario-tom-1600 {
-    top: 149px;
-    left: 636px;
+    top: 146px;
+    left: 606px;
 }
 
 .horario-tom-1800 {
-    top: 149px;
-    left: 683px;
+    top: 146px;
+    left: 647px;
 }
 
 .horario-tom-2000 {
-    top: 149px;
-    left: 730px;
+    top: 146px;
+    left: 688px;
 }
 
 .horario-tom-2200 {
-    top: 149px;
-    left: 777px;
+    top: 146px;
+    left: 729px;
 }
 
 .horario-tom-2400 {
-    top: 149px;
-    left: 824px;
+    top: 146px;
+    left: 770px;
 }
 
-/* ELECTROCARDIOGRAMA */
+/* ELECTROCARDIOGRAMA — top: 197-3=194 */
 .horario-eco-0600 {
-    top: 197px;
+    top: 194px;
     left: 401px;
 }
 
 .horario-eco-0800 {
-    top: 197px;
-    left: 448px;
+    top: 194px;
+    left: 442px;
 }
 
 .horario-eco-1000 {
-    top: 197px;
-    left: 495px;
+    top: 194px;
+    left: 483px;
 }
 
 .horario-eco-1200 {
-    top: 197px;
-    left: 542px;
+    top: 194px;
+    left: 524px;
 }
 
 .horario-eco-1400 {
-    top: 197px;
-    left: 589px;
+    top: 194px;
+    left: 565px;
 }
 
 .horario-eco-1600 {
-    top: 197px;
-    left: 636px;
+    top: 194px;
+    left: 606px;
 }
 
 .horario-eco-1800 {
-    top: 197px;
-    left: 683px;
+    top: 194px;
+    left: 647px;
 }
 
 .horario-eco-2000 {
-    top: 197px;
-    left: 730px;
+    top: 194px;
+    left: 688px;
 }
 
 .horario-eco-2200 {
-    top: 197px;
-    left: 777px;
+    top: 194px;
+    left: 729px;
 }
 
 .horario-eco-2400 {
-    top: 197px;
-    left: 824px;
+    top: 194px;
+    left: 770px;
 }
 
-/* LABORATORIO */
+/* LABORATORIO — top: 247-3=244 */
 .horario-lab-0600 {
-    top: 247px;
+    top: 244px;
     left: 401px;
 }
 
 .horario-lab-0800 {
-    top: 247px;
-    left: 448px;
+    top: 244px;
+    left: 442px;
 }
 
 .horario-lab-1000 {
-    top: 247px;
-    left: 495px;
+    top: 244px;
+    left: 483px;
 }
 
 .horario-lab-1200 {
-    top: 247px;
-    left: 542px;
+    top: 244px;
+    left: 524px;
 }
 
 .horario-lab-1400 {
-    top: 247px;
-    left: 589px;
+    top: 244px;
+    left: 565px;
 }
 
 .horario-lab-1600 {
-    top: 247px;
-    left: 636px;
+    top: 244px;
+    left: 606px;
 }
 
 .horario-lab-1800 {
-    top: 247px;
-    left: 683px;
+    top: 244px;
+    left: 647px;
 }
 
 .horario-lab-2000 {
-    top: 247px;
-    left: 730px;
+    top: 244px;
+    left: 688px;
 }
 
 .horario-lab-2200 {
-    top: 247px;
-    left: 777px;
+    top: 244px;
+    left: 729px;
 }
 
 .horario-lab-2400 {
-    top: 247px;
-    left: 824px;
+    top: 244px;
+    left: 770px;
 }
 
-/* MEDICACIÓN */
+/* MEDICACIÓN — top: 297-3=294 */
 .horario-med-0600 {
-    top: 297px;
+    top: 294px;
     left: 401px;
 }
 
 .horario-med-0800 {
-    top: 297px;
-    left: 448px;
+    top: 294px;
+    left: 442px;
 }
 
 .horario-med-1000 {
-    top: 297px;
-    left: 495px;
+    top: 294px;
+    left: 483px;
 }
 
 .horario-med-1200 {
-    top: 297px;
-    left: 542px;
+    top: 294px;
+    left: 524px;
 }
 
 .horario-med-1400 {
-    top: 297px;
-    left: 589px;
+    top: 294px;
+    left: 565px;
 }
 
 .horario-med-1600 {
-    top: 297px;
-    left: 636px;
+    top: 294px;
+    left: 606px;
 }
 
 .horario-med-1800 {
-    top: 297px;
-    left: 683px;
+    top: 294px;
+    left: 647px;
 }
 
 .horario-med-2000 {
-    top: 297px;
-    left: 730px;
+    top: 294px;
+    left: 688px;
 }
 
 .horario-med-2200 {
-    top: 297px;
-    left: 777px;
+    top: 294px;
+    left: 729px;
 }
 
 .horario-med-2400 {
-    top: 297px;
-    left: 824px;
+    top: 294px;
+    left: 770px;
 }
 
 /* ── ACCIONES ── */
