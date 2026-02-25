@@ -14,6 +14,20 @@ document.getElementById('formulario5').addEventListener('submit', async function
     const tramites = document.querySelectorAll('input[name="tramite"]:checked');
     const tramiteValor = Array.from(tramites).map(t => t.value).join(', ');
 
+    // Función que junta los horarios marcados de una fila en un string
+    function getHorarios(prefijo) {
+        const horas = ['0600', '0800', '1000', '1200', '1400', '1600', '1800', '2000', '2200', '2400'];
+        const labels = ['06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00', '24:00'];
+        let resultado = [];
+        horas.forEach((h, i) => {
+            const el = document.querySelector('.horario-' + prefijo + '-' + h);
+            if (el && el.value.trim() !== '') {
+                resultado.push(labels[i] + '=' + el.value.trim());
+            }
+        });
+        return resultado.join(', ');
+    }
+
     const datos = {
         fecha: document.getElementById('fecha').value,
         hab: document.getElementById('hab').value,
@@ -50,6 +64,11 @@ document.getElementById('formulario5').addEventListener('submit', async function
         controles_noche_p: document.querySelector('.control-noche-p').value,
         controles_noche_ta: document.querySelector('.control-noche-ta').value,
         controles_noche_o2: document.querySelector('.control-noche-o2').value,
+        horarios_csv: getHorarios('csv'),
+        horarios_tomografia: getHorarios('tom'),
+        horarios_electrocardiograma: getHorarios('eco'),
+        horarios_laboratorio: getHorarios('lab'),
+        horarios_medicacion: getHorarios('med'),
     };
 
     try {
