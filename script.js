@@ -14,7 +14,6 @@ document.getElementById('formulario5').addEventListener('submit', async function
     const tramites = document.querySelectorAll('input[name="tramite"]:checked');
     const tramiteValor = Array.from(tramites).map(t => t.value).join(', ');
 
-    // Función que junta los horarios marcados de una fila en un string
     function getHorarios(prefijo) {
         const horas = ['0600', '0800', '1000', '1200', '1400', '1600', '1800', '2000', '2200', '2400'];
         const labels = ['06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00', '24:00'];
@@ -102,6 +101,46 @@ const btnMic = document.getElementById('btn-mic');
 const micStatus = document.getElementById('mic-status');
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
+// Mapea una hora HH:MM al código de columna correspondiente
+function horaAColumna(horaStr) {
+    const partes = horaStr.trim().split(':');
+    if (partes.length !== 2) return null;
+    let h = parseInt(partes[0]);
+    let m = parseInt(partes[1]);
+    let minutos = h * 60 + m;
+    // 00:00 a 01:45 lo tratamos como 24:00+
+    if (h < 6) minutos += 24 * 60;
+
+    const columnas = [
+        { col: '0600', desde: 6 * 60, hasta: 8 * 60 },
+        { col: '0800', desde: 8 * 60, hasta: 10 * 60 },
+        { col: '1000', desde: 10 * 60, hasta: 12 * 60 },
+        { col: '1200', desde: 12 * 60, hasta: 14 * 60 },
+        { col: '1400', desde: 14 * 60, hasta: 16 * 60 },
+        { col: '1600', desde: 16 * 60, hasta: 18 * 60 },
+        { col: '1800', desde: 18 * 60, hasta: 20 * 60 },
+        { col: '2000', desde: 20 * 60, hasta: 22 * 60 },
+        { col: '2200', desde: 22 * 60, hasta: 24 * 60 },
+        { col: '2400', desde: 24 * 60, hasta: 26 * 60 },
+    ];
+
+    const col = columnas.find(c => minutos >= c.desde && minutos < c.hasta);
+    return col ? col.col : null;
+}
+
+// Llena los cuadritos de horarios a partir de un string "08:00, 14:00, 22:00"
+function fillHorarios(prefijo, horasStr) {
+    if (!horasStr) return;
+    const horas = horasStr.split(',').map(h => h.trim()).filter(h => h);
+    horas.forEach(hora => {
+        const col = horaAColumna(hora);
+        if (col) {
+            const el = document.querySelector('.horario-' + prefijo + '-' + col);
+            if (el) el.value = hora;
+        }
+    });
+}
+
 if (!SpeechRecognition) {
     btnMic.disabled = true;
     micStatus.textContent = 'Dictado no disponible. Usá Chrome o Edge.';
@@ -161,13 +200,24 @@ if (!SpeechRecognition) {
             if (!response.ok) throw new Error('Error en n8n');
 
             const data = await response.json();
+
+            // Llenar campos normales
             Object.keys(data).forEach(key => {
+                if (key.startsWith('horarios_')) return; // los manejamos aparte
                 const classMapped = key.replace('controles_', 'control-').replace(/_/g, '-');
                 const el = document.getElementById(key) || document.querySelector('.' + classMapped);
                 if (el && data[key] !== null && data[key] !== undefined) {
                     el.value = data[key];
                 }
             });
+
+            // Llenar cuadritos de horarios
+            fillHorarios('csv', data.horarios_csv);
+            fillHorarios('tom', data.horarios_tomografia);
+            fillHorarios('eco', data.horarios_electrocardiograma);
+            fillHorarios('lab', data.horarios_laboratorio);
+            fillHorarios('med', data.horarios_medicacion);
+
             micStatus.textContent = '✅ Campos completados. Revisá y enviá.';
         } catch (error) {
             micStatus.textContent = '⚠️ Error al procesar. Intentá de nuevo.';
