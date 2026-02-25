@@ -14,9 +14,10 @@ body {
     background: #e5e5e5;
     padding: 20mm;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     min-height: 100vh;
+    overflow-x: auto;
 }
 
 .page {
@@ -24,6 +25,7 @@ body {
     background: white;
     padding: 20mm;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+    min-width: 982px;
 }
 
 .form-container {
