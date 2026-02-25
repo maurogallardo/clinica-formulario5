@@ -101,14 +101,12 @@ const btnMic = document.getElementById('btn-mic');
 const micStatus = document.getElementById('mic-status');
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
-// Mapea una hora HH:MM al código de columna correspondiente
 function horaAColumna(horaStr) {
     const partes = horaStr.trim().split(':');
     if (partes.length !== 2) return null;
     let h = parseInt(partes[0]);
     let m = parseInt(partes[1]);
     let minutos = h * 60 + m;
-    // 00:00 a 01:45 lo tratamos como 24:00+
     if (h < 6) minutos += 24 * 60;
 
     const columnas = [
@@ -128,9 +126,12 @@ function horaAColumna(horaStr) {
     return col ? col.col : null;
 }
 
-// Llena los cuadritos de horarios a partir de un string "08:00, 14:00, 22:00"
 function fillHorarios(prefijo, horasStr) {
     if (!horasStr) return;
+    if (horasStr === 'FALTAN DATOS DE HORARIOS') {
+        // Mostrar aviso pero no llenar nada
+        return;
+    }
     const horas = horasStr.split(',').map(h => h.trim()).filter(h => h);
     horas.forEach(hora => {
         const col = horaAColumna(hora);
@@ -139,6 +140,31 @@ function fillHorarios(prefijo, horasStr) {
             if (el) el.value = hora;
         }
     });
+}
+
+function setField(key, value) {
+    // Manejar __BORRAR__
+    if (value === '__BORRAR__') {
+        const classMapped = key.replace('controles_', 'control-').replace(/_/g, '-');
+        const el = document.getElementById(key) || document.querySelector('.' + classMapped);
+        if (el) el.value = '';
+        return;
+    }
+
+    // Tramite es checkbox especial
+    if (key === 'tramite') {
+        const checkboxes = document.querySelectorAll('input[name="tramite"]');
+        checkboxes.forEach(cb => {
+            cb.checked = (value === cb.value);
+        });
+        return;
+    }
+
+    const classMapped = key.replace('controles_', 'control-').replace(/_/g, '-');
+    const el = document.getElementById(key) || document.querySelector('.' + classMapped);
+    if (el && value !== null && value !== undefined) {
+        el.value = value;
+    }
 }
 
 if (!SpeechRecognition) {
@@ -204,29 +230,16 @@ if (!SpeechRecognition) {
             // Llenar campos normales
             Object.keys(data).forEach(key => {
                 if (key.startsWith('horarios_')) return;
-
-                // Tramite es checkbox especial
-                if (key === 'tramite') {
-                    const checkboxes = document.querySelectorAll('input[name="tramite"]');
-                    checkboxes.forEach(cb => {
-                        cb.checked = (data[key] === cb.value);
-                    });
-                    return;
-                }
-
-                const classMapped = key.replace('controles_', 'control-').replace(/_/g, '-');
-                const el = document.getElementById(key) || document.querySelector('.' + classMapped);
-                if (el && data[key] !== null && data[key] !== undefined) {
-                    el.value = data[key];
-                }
+                if (data[key] === null || data[key] === undefined) return;
+                setField(key, data[key]);
             });
 
             // Llenar cuadritos de horarios
-            fillHorarios('csv', data.horarios_csv);
-            fillHorarios('tom', data.horarios_tomografia);
-            fillHorarios('eco', data.horarios_electrocardiograma);
-            fillHorarios('lab', data.horarios_laboratorio);
-            fillHorarios('med', data.horarios_medicacion);
+            if (data.horarios_csv) fillHorarios('csv', data.horarios_csv);
+            if (data.horarios_tomografia) fillHorarios('tom', data.horarios_tomografia);
+            if (data.horarios_electrocardiograma) fillHorarios('eco', data.horarios_electrocardiograma);
+            if (data.horarios_laboratorio) fillHorarios('lab', data.horarios_laboratorio);
+            if (data.horarios_medicacion) fillHorarios('med', data.horarios_medicacion);
 
             micStatus.textContent = '✅ Campos completados. Revisá y enviá.';
         } catch (error) {
