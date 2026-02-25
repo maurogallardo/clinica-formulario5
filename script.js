@@ -181,9 +181,11 @@ if (!SpeechRecognition) {
 
     btnMic.addEventListener('click', () => {
         if (grabando) {
+            grabando = false;
             recognition.stop();
         } else {
             transcripcionCompleta = '';
+            grabando = true;
             recognition.start();
         }
     });
@@ -205,7 +207,14 @@ if (!SpeechRecognition) {
     };
 
     recognition.onend = async () => {
-        grabando = false;
+        // Si el usuario no apretó stop, reiniciar automáticamente
+        if (grabando) {
+            try {
+                recognition.start();
+            } catch (e) { }
+            return;
+        }
+
         btnMic.classList.remove('grabando');
         btnMic.textContent = '🎤';
 
