@@ -21,7 +21,7 @@ document.getElementById('formulario5').addEventListener('submit', async function
         horas.forEach((h, i) => {
             const el = document.querySelector('.horario-' + prefijo + '-' + h);
             if (el && el.value.trim() !== '') {
-                resultado.push(labels[i] + '=' + el.value.trim());
+                resultado.push(el.value.trim());
             }
         });
         return resultado.join(', ');
