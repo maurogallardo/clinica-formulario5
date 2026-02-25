@@ -203,7 +203,17 @@ if (!SpeechRecognition) {
 
             // Llenar campos normales
             Object.keys(data).forEach(key => {
-                if (key.startsWith('horarios_')) return; // los manejamos aparte
+                if (key.startsWith('horarios_')) return;
+
+                // Tramite es checkbox especial
+                if (key === 'tramite') {
+                    const checkboxes = document.querySelectorAll('input[name="tramite"]');
+                    checkboxes.forEach(cb => {
+                        cb.checked = (data[key] === cb.value);
+                    });
+                    return;
+                }
+
                 const classMapped = key.replace('controles_', 'control-').replace(/_/g, '-');
                 const el = document.getElementById(key) || document.querySelector('.' + classMapped);
                 if (el && data[key] !== null && data[key] !== undefined) {
